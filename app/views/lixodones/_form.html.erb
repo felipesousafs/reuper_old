@@ -1,0 +1,27 @@
+<%= form_for(lixodone) do |f| %>
+  <% if lixodone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lixodone.errors.count, "error") %> prohibited this lixodone from being saved:</h2>
+
+      <ul>
+      <% lixodone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :residente_id %>
+    <%= f.number_field :residente_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :data %>
+    <%= f.date_select :data %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

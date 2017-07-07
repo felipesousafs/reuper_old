@@ -1,0 +1,7 @@
+pt-BR:
+  residentes:
+    index:
+      new: Cadastrar novo residente
+      show: Detalhes
+      edit: Editar
+      destroy: Excluir residente

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Matricula:</strong>
+  <%= @residente.matricula %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @residente.nome %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @residente.curso.nome %>
+</p>
+
+<p>
+  <strong>Quarto:</strong>
+  <%= @residente.quarto.numero.to_s + " - " + @residente.quarto.piso %>
+</p>
+
+<%= link_to 'Edit', edit_residente_path(@residente) %> |
+<%= link_to 'Back', residentes_path %>

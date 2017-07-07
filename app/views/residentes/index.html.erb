@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Residentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Matricula</th>
+      <th>Nome</th>
+      <th>Curso</th>
+      <th>Quarto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @residentes.each do |residente| %>
+      <tr>
+        <td><%= residente.matricula %></td>
+        <td><%= residente.nome %></td>
+        <td><%= residente.curso.nome %></td>
+        <td><%= residente.quarto.numero.to_s + " - " + residente.quarto.piso %></td>
+        <td><%= link_to t('.show'), residente %></td>
+        <td><%= link_to t('.edit'), edit_residente_path(residente) %></td>
+        <td><%= link_to t('.destroy'), residente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('.new'), new_residente_path %>

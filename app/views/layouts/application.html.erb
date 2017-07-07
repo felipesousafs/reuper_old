@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reuper</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <p><%= link_to "Residentes", residentes_path %>
+  <%= link_to "Quartos", quartos_path %>
+  <%= link_to "Cursos", cursos_path %></p>
+    <%= yield %>
+  </body>
+</html>

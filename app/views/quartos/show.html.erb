@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @quarto.numero %>
+</p>
+
+<p>
+  <strong>Piso:</strong>
+  <%= @quarto.piso %>
+</p>
+
+<%= link_to 'Edit', edit_quarto_path(@quarto) %> |
+<%= link_to 'Back', quartos_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lixotodos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Residente</th>
+      <th>Data</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lixotodos.each do |lixotodo| %>
+      <tr>
+        <td><%= lixotodo.residente_id %></td>
+        <td><%= lixotodo.data %></td>
+        <td><%= link_to 'Show', lixotodo %></td>
+        <td><%= link_to 'Edit', edit_lixotodo_path(lixotodo) %></td>
+        <td><%= link_to 'Destroy', lixotodo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lixotodo', new_lixotodo_path %>

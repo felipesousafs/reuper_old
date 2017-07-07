@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Residente:</strong>
+  <%= @lixotodo.residente_id %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @lixotodo.data %>
+</p>
+
+<%= link_to 'Edit', edit_lixotodo_path(@lixotodo) %> |
+<%= link_to 'Back', lixotodos_path %>

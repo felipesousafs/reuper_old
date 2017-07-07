@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Residente:</strong>
+  <%= @lixodone.residente_id %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @lixodone.data %>
+</p>
+
+<%= link_to 'Edit', edit_lixodone_path(@lixodone) %> |
+<%= link_to 'Back', lixodones_path %>
