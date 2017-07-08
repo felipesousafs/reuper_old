@@ -6,5 +6,6 @@ class CreateLixotodos < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_reference :lixotodos, :residente_id, foreign_key: true
   end
 end

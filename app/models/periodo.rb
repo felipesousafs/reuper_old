@@ -1,0 +1,3 @@
+class Periodo < ApplicationRecord
+
+end

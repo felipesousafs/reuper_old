@@ -9,6 +9,8 @@ class CreateResidentes < ActiveRecord::Migration[5.0]
       t.timestamps
     end
     add_index :residentes, :matricula
+    add_reference :residentes, :quarto_id, foreign_key: true
+    add_reference :residentes, :curso_id, foreign_key: true
 
   end
 end

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Lixotodos</h1>
+<h1>Lixo - a cumprir</h1>
 
 <table>
   <thead>
@@ -14,7 +14,7 @@
   <tbody>
     <% @lixotodos.each do |lixotodo| %>
       <tr>
-        <td><%= lixotodo.residente_id %></td>
+        <td><%= lixotodo.residente.nome %></td>
         <td><%= lixotodo.data %></td>
         <td><%= link_to 'Show', lixotodo %></td>
         <td><%= link_to 'Edit', edit_lixotodo_path(lixotodo) %></td>
