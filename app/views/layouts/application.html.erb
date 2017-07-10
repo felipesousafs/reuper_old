@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Reuper</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Reuper</title>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico'
+        rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-  <p><%= link_to "Residentes", residentes_path %>
-  <%= link_to "Quartos", quartos_path %>
-  <%= link_to "Cursos", cursos_path %></p>
-  <p><%= link_to "Lixo - a cumprir", lixotodos_path %>
-  <%= link_to "Lixo - cumprido", lixodones_path %></p>
-  <p><%= link_to "ADD Lixo", populate_lixotodos_path %></p>
-    <%= yield %>
-  </body>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+  <div id="header-wrap">
+    <h1><%= link_to "Reuper", root_path %> </h1>
+    <nav>
+      <ul>
+        <p><li><%= link_to "Residentes", residentes_path %></li>
+        <li><%= link_to "Quartos", quartos_path %></li>
+        <li> <%= link_to "Cursos", cursos_path %></li></p>
+        <p><li><%= link_to "Lixo - a cumprir", lixotodos_path %></li>
+        <li><%= link_to "Lixo - cumprido", lixodones_path %></li></p>
+        <p><li><%= link_to "Atualizar tabela de Lixo-todo", populate_lixotodos_path %></li></p>
+        <p><li><%= link_to "Atualizar tabela de Lixo-done", refresh_lixodones_path %></li></p>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="content">
+  <% if notice.present? %>
+      <p id="notice"><%= notice %> </p>
+  <% end %>
+  <% if alert.present? %>
+      <p id="alert"><%= alert %> </p>
+  <% end %>
+  <%= yield %>
+</div>
+</body>
 </html>

@@ -3,12 +3,16 @@ class ApplicationController < ActionController::Base
 
   def populate_lixotodos
     @residentes = Residente.order('nome')
-    @last = Lixotodo.last
-    if @last.nil?
+    last = Lixotodo.last
+    if last.nil?
       @periodo = Periodo.last
-      @start = @periodo.start
+      if @periodo.start < Date.current
+        @start = Date.current
+      else
+        @start = @periodo.start
+      end
     else
-      @start = @last.data
+      @start = last.data.next_day
     end
     flag = 1
     @residentes.each do |residente|
@@ -16,15 +20,33 @@ class ApplicationController < ActionController::Base
       @lixotodo.residente_id= residente.id
       if flag.zero?
         @lixotodo.data= @start
-        @lixotodo.save
-        @start = @start.next_day
-        flag = 1
+        if @lixotodo.save
+          @start = @start.next_day
+          flag = 1
+        end
       else
         @lixotodo.data= @start
-        @lixotodo.save
-        flag = 0
+        if @lixotodo.save
+          flag = 0
+        end
       end
     end
+
     redirect_to lixotodos_path
   end
+  def populate_lixodones(residente_id, data)
+    @lixodone = Lixodone.new
+    @lixodone.residente_id= residente_id
+    @lixodone.data= data
+    @lixodone.save
+  end
+  #Se a data atual for maior que a data da tarefa do residente, ele eh inserido na tabela de lixodone
+  def refresh_lixodones
+    lixotodos = Lixotodo.where('data < ?', Date.today)
+    lixotodos.each do |lixotodo|
+      populate_lixodones(lixotodo.residente_id, lixotodo.data)
+    end
+    redirect_to lixodones_path
+  end
+
 end
