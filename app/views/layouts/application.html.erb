@@ -10,32 +10,158 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
-<header>
-  <div id="header-wrap">
-    <h1><%= link_to "Reuper", root_path %> </h1>
-    <nav>
-      <ul>
-        <p><li><%= link_to "Residentes", residentes_path %></li>
-        <li><%= link_to "Quartos", quartos_path %></li>
-        <li> <%= link_to "Cursos", cursos_path %></li></p>
-        <p><li><%= link_to "Lixo - a cumprir", lixotodos_path %></li>
-        <li><%= link_to "Lixo - cumprido", lixodones_path %></li></p>
-        <p><li><%= link_to "Atualizar tabela de Lixo-todo", populate_lixotodos_path %></li></p>
-        <p><li><%= link_to "Atualizar tabela de Lixo-done", refresh_lixodones_path %></li></p>
+<div id="wrapper">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="<%= root_path %>">Reuper</a>
+    </div>
+    <!-- Top Menu Items -->
+    <ul class="nav navbar-right top-nav">
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+        <ul class="dropdown-menu alert-dropdown">
+          <li>
+            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+          </li>
+          <li>
+            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">View All</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Administrador <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav side-nav">
+        <li id="menu-residentes">
+          <a href="<%= residentes_path %>"><i class="fa fa-fw fa-user"></i> Residentes</a>
+        </li>
+        <li id="menu-quartos">
+          <a href="<%= quartos_path %>"><i class="fa fa-fw fa-bed"></i> Quartos</a>
+        </li>
+        <li id="menu-cursos">
+          <a href="<%= cursos_path %>" id="menu-cursos"><i class="fa fa-fw fa-table"></i> Cursos</a>
+        </li>
+        <li id="menu-tabelas">
+          <a href="javascript:;" data-toggle="collapse" data-target="#demo" id="menu-tabelas"><i class="fa fa-fw fa-arrows-v"></i> Tabelas <i class="fa fa-fw fa-caret-down"></i></a>
+          <ul id="demo" class="collapse">
+            <li>
+              <a href="<%= lixotodos_path %>"><i class="fa fa-fw fa-edit"></i> Lixo</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-fw fa-edit"></i> Cozinha</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-fw fa-edit"></i> Alimentação</a>
+            </li>
+          </ul>
+        </li>
       </ul>
-    </nav>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+
+  <div id="page-wrapper">
+
+    <div class="container-fluid">
+      <!-- Page Heading -->
+      <div class="row">
+        <div class="col-lg-12 page-header">
+          <h2>
+            <%= controller_name.to_s.pluralize(2).capitalize %>
+
+          </h2>
+
+          <div class="text-right">
+            <% if controller_name == 'lixotodos' || controller_name == 'lixodones' %>
+                <%= render 'lixotodos/update_lixotodos' %>
+            <% end %>
+            <%= link_to t('modelo.btn.adicionar_html'), action: :new %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+
+            <div class="panel-body">
+              <div id="morris-area-chart">
+                <div id="content">
+                  <% if notice.present? %>
+                      <div class="row" id="notice">
+                        <div class="col-lg-12">
+                          <div class="alert alert-info alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <i class="fa fa-info-circle"></i> <%= notice %>
+                          </div>
+                        </div>
+                      </div>
+                  <% end %>
+                  <% if alert.present? %>
+                      <div class="row" id="alert">
+                        <div class="col-lg-12">
+                          <div class="alert alert-info alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <i class="fa fa-info-circle"></i> <%= alert %>
+                          </div>
+                        </div>
+                      </div>
+                  <% end %>
+                  <%= yield %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container-fluid -->
+
   </div>
-</header>
-<div id="content">
-  <% if notice.present? %>
-      <p id="notice"><%= notice %> </p>
-  <% end %>
-  <% if alert.present? %>
-      <p id="alert"><%= alert %> </p>
-  <% end %>
-  <%= yield %>
+  <!-- /#page-wrapper -->
+
 </div>
+<!-- /#wrapper -->
+
 </body>
+
 </html>

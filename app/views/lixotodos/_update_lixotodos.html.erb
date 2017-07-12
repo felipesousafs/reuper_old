@@ -1,0 +1,7 @@
+<%= link_to t('modelo.btn.lixotodo_html'), lixotodos_path %>
+<%= link_to t('modelo.btn.lixodone_html'), lixodones_path %>
+<% if controller_name == 'lixotodos' %>
+  <%= link_to t('modelo.btn.update_lixotodo_html'), populate_lixotodos_path %>
+<% else %>
+  <%= link_to t('modelo.btn.update_lixodone_html'), refresh_lixodones_path %>
+<% end %>

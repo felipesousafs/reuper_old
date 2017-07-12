@@ -1,4 +1,9 @@
 <%= form_for(quarto) do |f| %>
+    <div class="form-group" style="border-bottom: double 1px #dddddd;">
+      <div class="col-sm-10">
+        <h3>Adicionar Quarto</h3>
+      </div>
+    </div>
   <% if quarto.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(quarto.errors.count, "error") %> prohibited this quarto from being saved:</h2>
@@ -11,17 +16,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :numero %>
-    <%= f.number_field :numero %>
+    <div class="col-sm-10">
+      <%= f.select :numero, 1..16 %>
+
+    </div>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :piso %>
-    <%= f.text_field :piso %>
+    <div class="col-sm-10">
+      <%= f.select :piso, ["Inferior", "Superior"] %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
