@@ -9,4 +9,12 @@ class Residente < ApplicationRecord
   def curso
     @curso = Curso.find(self.curso_id)
   end
+  # def self.search(term)
+  #   if term.nil?
+  #     all
+  #   else
+  #     where('ILIKE :term', term: "%#{term.downcase}%")
+  #   end
+  #
+  # end
 end

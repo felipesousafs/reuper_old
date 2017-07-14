@@ -1,6 +1,7 @@
 class LixotodosController < ApplicationController
   before_action :set_lixotodo, only: [:show, :edit, :update, :destroy]
 
+
   # GET /lixotodos
   # GET /lixotodos.json
   def index

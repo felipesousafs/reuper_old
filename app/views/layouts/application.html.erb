@@ -2,15 +2,12 @@
 <html>
 <head>
   <title>Reuper</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Pacifico'
         rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 <body>
 <div id="wrapper">
@@ -120,7 +117,6 @@
           <div class="panel panel-default">
 
             <div class="panel-body">
-              <div id="morris-area-chart">
                 <div id="content">
                   <% if notice.present? %>
                       <div class="row" id="notice">
@@ -144,7 +140,6 @@
                   <% end %>
                   <%= yield %>
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -162,6 +157,8 @@
 </div>
 <!-- /#wrapper -->
 
+<%= javascript_include_tag "application" %>
+<%= yield :js %>
 </body>
 
 </html>

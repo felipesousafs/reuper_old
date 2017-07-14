@@ -68,3 +68,60 @@ form{
     @extend .control-label;
   }
 }
+
+
+.books-search input {
+  font-size: 1em;
+  padding: .5em 1.3em;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 2em;
+}
+
+.books-search input:focus {
+  border-color: #A5CEF5;
+}
+.books-search .results .ui-widget-content {
+  background: #fff;
+  font-size: .9em;
+  padding: .5em 0;
+  border-color: #ddd;
+  box-shadow: 0 .1em .2em rgba(187, 187, 187, 0.64);
+  line-height: 1.2;
+  max-height: 20em;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.books-search .results .ui-menu-item {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  padding: .4em .6em .4em 6.2em;
+  position: relative;
+  border: 0;
+  border-left: 5px solid transparent;
+  height: 6.5em;
+}
+.books-search .results .ui-state-focus {
+  background: #fff;
+  border-left-color: #08c;
+  font-weight: 300;
+}
+
+.books-search .results .ui-menu-item .id {
+  display: block;
+  color: #555;
+}
+
+.books-search .results .ui-menu-item .nome {
+  display: block;
+  font-size: .8em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-top: .6em;
+  letter-spacing: 1px;
+}
+
+.books-search .results .ui-state-focus .id,
+.books-search .results .ui-state-focus .nome {
+  color: #08c;
+}

@@ -1,7 +1,43 @@
 <script>
     document.getElementById("menu-tabelas").className = 'active';
 </script>
+<% content_for :js do %>
+    <script type="text/javascript">
 
+            prettyPrint();
+
+            //$('select#residenteid').select2();
+
+            $('select#residenteid').select2({
+                placeholder: "Selecione um residente",
+                allowClear: false
+            });
+
+
+            function formatExample(residente) {
+                var originalOption = $(residente.element);
+                return "<span style='display: inline; background-color: " + originalOption.data("favoriteColor").toLowerCase() + "'>&nbsp;&nbsp;</span> " + residente.text;
+            }
+            $('select#template-example').select2({
+                formatResult: formatExample,
+                formatSelection: formatExample,
+                escapeMarkup: function(m) { return m; }
+            });
+
+            $('#ajax-example').select2({
+                ajax: {
+                    url: "<%= residentes_path(format: 'json') %>",
+                    dataType: "json",
+                    results: function(data, page) {
+                        return { results: $.map( data, function(residente, i) {
+                            return { id: residente.id, text: residente.name }
+                        } ) }
+                    }
+                }
+            });
+
+    </script>
+<% end %>
 <%= render 'form', lixotodo: @lixotodo %>
 
 <%= link_to 'Back', lixotodos_path %>
