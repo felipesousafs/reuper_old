@@ -21,6 +21,12 @@ class CursosController < ApplicationController
   def edit
   end
 
+  def name
+    respond_to do |format|
+      format.html { "Cursos" }
+    end
+  end
+
   # POST /cursos
   # POST /cursos.json
   def create

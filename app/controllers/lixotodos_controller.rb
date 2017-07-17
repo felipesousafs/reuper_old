@@ -5,7 +5,7 @@ class LixotodosController < ApplicationController
   # GET /lixotodos
   # GET /lixotodos.json
   def index
-    @lixotodos = Lixotodo.all
+    @lixotodos = Lixotodo.order("data")
   end
 
   # GET /lixotodos/1
@@ -52,6 +52,11 @@ class LixotodosController < ApplicationController
     end
   end
 
+  def name
+    respond_to do |format|
+      format.html { "Tabela de lixo a ser cumprida" }
+    end
+  end
   # DELETE /lixotodos/1
   # DELETE /lixotodos/1.json
   def destroy

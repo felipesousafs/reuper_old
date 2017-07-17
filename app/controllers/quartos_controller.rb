@@ -12,6 +12,12 @@ class QuartosController < ApplicationController
   def show
   end
 
+  def name
+    respond_to do |format|
+      format.html { "Quartos" }
+    end
+  end
+
   # GET /quartos/new
   def new
     @quarto = Quarto.new

@@ -1,28 +1,37 @@
 <script>
     document.getElementById("menu-tabelas").className = 'active';
 </script>
+<% flag = 0 %>
 <table>
-  <thead>
-    <tr>
-      <th>Residente</th>
-      <th>Data</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
-    <% @lixotodos.each do |lixotodo| %>
-      <tr>
-        <td><%= lixotodo.residente.nome %></td>
-        <td><%= lixotodo.data %></td>
-        <td><%= link_to 'Show', lixotodo %></td>
-        <td><%= link_to 'Edit', edit_lixotodo_path(lixotodo) %></td>
-        <td><%= link_to 'Destroy', lixotodo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <% @lixotodos.each do |lixotodo| %>
+    <% if flag%2 == 0 %>
+      <div class="panel panel-default panel-lixotodo" style="border-top: none;">
+        <div class="panel-heading" style="background: #333; color: #eeeeee">
+          <h3 class="panel-title"><i class="fa fa-clock-o fa-tasks"></i> <%= lixotodo.data %></h3>
+        </div>
+        <div class="panel-body">
     <% end %>
+          <div class="list-group row">
+            <div class="col-lg-9">
+              <a href="<%= lixotodo_path(lixotodo.id) %>" class="list-group-item">
+                <i class="fa fa-fw fa-user"></i> <%= lixotodo.residente.nome %> &emsp;  &emsp;
+                <i class="fa fa-fw fa-calendar"></i> <%= lixotodo.data %>
+              </a>
+            </div>
+            <div class="col-md-3 list-group-item" style="border: none;">
+              <a class="label label-default" href="<%= edit_lixotodo_path(lixotodo) %>">Editar</a>
+              <%= link_to t('.destroy'), lixotodo, method: :delete, :class => 'label label-danger', data: { confirm: 'Tem certeza?' } %>
+            </div>
+          </div>
+    <% if flag%2 != 0 %>
+        </div>
+      </div>
+    <% end %>
+    <% flag = flag+1 %>
+  <% end %>
+  <div class="text-right">
+    <a href="#">Ver todos <i class="fa fa-arrow-circle-right"></i></a>
+  </div>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Lixotodo', new_lixotodo_path %>

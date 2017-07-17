@@ -218,11 +218,17 @@ pt-BR:
       show: Detalhes
       edit: Editar
       destroy: Excluir residente
+  lixotodos:
+    index:
+      destroy: Excluir registro
   modelo:
     title: "%{controller} cadastrados"
     btn:
       adicionar_html: "<div class=\"btn btn-info\"><i class=\"fa fa-fw fa-plus\"></i> Adicionar manualmente</div>"
       lixotodo_html: "<div class=\"btn btn-warning\"><i class=\"fa fa-fw fa-hourglass-start\"></i> A cumprir</div>"
       lixodone_html: "<div class=\"btn btn-success\"><i class=\"fa fa-fw fa-check-square-o\"></i> Finalizados</div>"
-      update_lixotodo_html: "<div class=\"btn btn-primary\"><i class=\"fa fa-fw fa-plus\"></i> Atualizar</div>"
-      update_lixodone_html: "<div class=\"btn btn-primary\"><i class=\"fa fa-fw fa-plus\"></i> Atualizar</div>"
+      update_lixotodo_html: "<div class=\"btn btn-primary\"><i class=\"fa fa-fw fa-refresh\"></i> Atualizar</div>"
+      update_lixodone_html: "<div class=\"btn btn-primary\"><i class=\"fa fa-fw fa-refresh\"></i> Atualizar</div>"
+  controller:
+    lixotodos:
+      name: Tabela de lixo a ser cumprida

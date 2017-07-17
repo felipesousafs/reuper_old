@@ -125,3 +125,6 @@ form{
 .books-search .results .ui-state-focus .nome {
   color: #08c;
 }
+.panel-lixotodo{
+  @include shadow(#ccc, 0, 3px, 6px);
+}

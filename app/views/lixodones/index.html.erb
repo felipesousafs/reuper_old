@@ -2,14 +2,6 @@
     document.getElementById("menu-tabelas").className = 'active';
 </script>
 <table>
-  <thead>
-    <tr>
-      <th>Residente</th>
-      <th>Data</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
     <% @lixodones.each do |lixodone| %>
       <tr>
@@ -22,7 +14,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Lixodone', new_lixodone_path %>

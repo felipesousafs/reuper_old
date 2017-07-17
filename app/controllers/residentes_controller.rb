@@ -12,6 +12,12 @@ class ResidentesController < ApplicationController
   def show
   end
 
+  def name
+    respond_to do |format|
+      format.html { "Residentes" }
+    end
+  end
+
   # GET /residentes/new
   def new
     @residente = Residente.new

@@ -21,6 +21,12 @@ class LixodonesController < ApplicationController
   def edit
   end
 
+  def name
+    respond_to do |format|
+      format.html { "Tabela de lixo já cumprida" }
+    end
+  end
+
   # POST /lixodones
   # POST /lixodones.json
   def create
