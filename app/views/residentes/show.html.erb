@@ -1,25 +1,29 @@
 <script>
     document.getElementById("menu-residentes").className = 'active';
 </script>
-<p>
-  <strong>Matricula:</strong>
-  <%= @residente.matricula %>
-</p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @residente.nome %>
-</p>
-
-<p>
-  <strong>Curso:</strong>
-  <%= @residente.curso.nome %>
-</p>
-
-<p>
-  <strong>Quarto:</strong>
-  <%= @residente.quarto.numero.to_s + " - " + @residente.quarto.piso %>
-</p>
-
-<%= link_to 'Edit', edit_residente_path(@residente) %> |
-<%= link_to 'Back', residentes_path %>
+<div class="panel panel-default panel-lixotodo" style="border-top: none;">
+  <div class="panel-heading" style="background: #333; color: #eeeeee">
+    <h3 class="panel-title"><i class="fa fa-user"></i>  <%= @residente.nome %></h3>
+  </div>
+  <div class="panel-body">
+    <div class="list-group row">
+      <div class="col-lg-12">
+        <div class="list-group-item">
+          <i class="fa fa-fw fa-id-card"></i> <b>Matrícula: </b> &emsp;  &emsp;
+          <%= @residente.matricula %>
+        </div>
+        <div class="list-group-item">
+          <i class="fa fa-fw fa-bed"></i> <b>Quarto: </b> &emsp;  &emsp;
+          <%= @residente.quarto.numero.to_s + " - " + @residente.quarto.piso %>
+        </div>
+        <div class="list-group-item">
+          <i class="fa fa-fw fa-book"></i> <b>Curso: </b> &emsp;  &emsp;
+          <%= @residente.curso.nome %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to 'Editar', edit_residente_path(@residente) %> |
+<%= link_to 'Voltar', residentes_path %>

@@ -16,18 +16,23 @@ class ApplicationController < ActionController::Base
     end
     flag = 1
     @residentes.each do |residente|
-      @lixotodo = Lixotodo.new
-      @lixotodo.residente_id= residente.id
-      if flag.zero?
-        @lixotodo.data= @start
-        if @lixotodo.save
-          @start = @start.next_day
-          flag = 1
+      if pode_adicionar?(residente.id)
+        @lixotodo = Lixotodo.new
+        @lixotodo.residente_id= residente.id
+        if flag.zero?
+          @lixotodo.data= @start
+          if @lixotodo.save
+            @start = @start.next_day
+            flag = 1
+          end
+        else
+          @lixotodo.data= @start
+          if @lixotodo.save
+            flag = 0
+          end
         end
-      else
-        @lixotodo.data= @start
-        if @lixotodo.save
-          flag = 0
+        while @start.on_weekend?
+          @start = @start.next_day
         end
       end
     end
@@ -47,6 +52,14 @@ class ApplicationController < ActionController::Base
       populate_lixodones(lixotodo.residente_id, lixotodo.data)
     end
     redirect_to lixodones_path
+  end
+
+  def pode_adicionar?(residente_id)
+    if Lixodone.exists?(residente_id: residente_id)
+      false
+    else
+      true
+    end
   end
 
 end

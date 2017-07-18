@@ -2,27 +2,27 @@
     document.getElementById("menu-quartos").className = 'active';
 </script>
 <table>
-  <thead>
-    <tr>
-      <th>Numero</th>
-      <th>Piso</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
-    <% @quartos.each do |quarto| %>
+  <% @quartos.each do |quarto| %>
       <tr>
-        <td><%= quarto.numero %></td>
-        <td><%= quarto.piso %></td>
-        <td><%= link_to 'Show', quarto %></td>
-        <td><%= link_to 'Edit', edit_quarto_path(quarto) %></td>
-        <td><%= link_to 'Destroy', quarto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <div class="list-group row">
+          <div class="col-lg-9">
+            <a href="<%= quarto_path(quarto.id) %>" class="list-group-item">
+              <i class="fa fa-fw fa-bed"></i> <%= quarto.numero.to_s + " - " + quarto.piso %>
+            </a>
+          </div>
+          <div class="col-md-3 list-group-item" style="border: none;">
+            <a class="label label-default" href="<%= edit_quarto_path(quarto) %>">Editar</a>
+            <%= link_to t('.destroy'), quarto, method: :delete, :class => 'label label-danger', data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
       </tr>
-    <% end %>
+
+  <% end %>
+  <div class="text-right">
+    <a href="#">Ver todos <i class="fa fa-arrow-circle-right"></i></a>
+  </div>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Quarto', new_quarto_path %>

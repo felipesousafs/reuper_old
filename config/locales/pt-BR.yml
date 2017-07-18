@@ -221,6 +221,15 @@ pt-BR:
   lixotodos:
     index:
       destroy: Excluir registro
+  lixodones:
+    index:
+      destroy: Excluir registro
+  quartos:
+    index:
+      destroy: Excluir registro
+  cursos:
+    index:
+      destroy: Excluir registro
   modelo:
     title: "%{controller} cadastrados"
     btn:

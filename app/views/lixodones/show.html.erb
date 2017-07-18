@@ -1,15 +1,26 @@
 <script>
     document.getElementById("menu-tabelas").className = 'active';
 </script>
-<p>
-  <strong>Residente:</strong>
-  <%= @lixodone.residente_id %>
-</p>
 
-<p>
-  <strong>Data:</strong>
-  <%= @lixodone.data %>
-</p>
+<div class="panel panel-default panel-lixotodo" style="border-top: none;">
+  <div class="panel-heading" style="background: #333; color: #eeeeee">
+    <h3 class="panel-title"><i class="fa fa-check-square-o"></i> Tarefa cumprida</h3>
+  </div>
+  <div class="panel-body">
+    <div class="list-group row">
+      <div class="col-lg-12">
+        <a href="/residentes/<%= @lixodone.residente_id %>" class="list-group-item">
+          <i class="fa fa-fw fa-user"></i> <b>Residente: </b> &emsp;  &emsp;
+          <%= @lixodone.residente.nome %>
+        </a>
+        <div class="list-group-item">
+          <i class="fa fa-fw fa-calendar"></i> <b>Data: </b> &emsp;  &emsp;
+          <%= @lixodone.data %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_lixodone_path(@lixodone) %> |
-<%= link_to 'Back', lixodones_path %>
+<%= link_to 'Editar', edit_lixodone_path(@lixodone) %> |
+<%= link_to 'Voltar', lixodones_path %>

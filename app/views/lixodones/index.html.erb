@@ -1,16 +1,36 @@
 <script>
     document.getElementById("menu-tabelas").className = 'active';
 </script>
-<table>
-  <tbody>
-    <% @lixodones.each do |lixodone| %>
-      <tr>
-        <td><%= lixodone.residente_id %></td>
-        <td><%= lixodone.data %></td>
-        <td><%= link_to 'Show', lixodone %></td>
-        <td><%= link_to 'Edit', edit_lixodone_path(lixodone) %></td>
-        <td><%= link_to 'Destroy', lixodone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+<% flag = 0 %>
+<tbody>
+  <% @lixodones.each do |lixodone| %>
+      <% if flag%2 == 0 %>
+          <div class="panel panel-default panel-lixotodo" style="border-top: none;">
+            <div class="panel-heading" style="background: #333; color: #eeeeee">
+              <h3 class="panel-title"><i class="fa fa-clock-o fa-tasks"></i> <%= lixodone.data %></h3>
+            </div>
+            <div class="panel-body">
+      <% end %>
+      <div class="list-group row">
+        <div class="col-lg-9">
+          <a href="<%= lixodone_path(lixodone.id) %>" class="list-group-item">
+            <i class="fa fa-fw fa-user"></i> <%= lixodone.residente.nome %> &emsp;  &emsp;
+            <i class="fa fa-fw fa-calendar"></i> <%= lixodone.data %>
+          </a>
+        </div>
+        <div class="col-md-3 list-group-item" style="border: none;">
+          <a class="label label-default" href="<%= edit_lixodone_path(lixodone) %>">Editar</a>
+          <%= link_to t('.destroy'), lixodone, method: :delete, :class => 'label label-danger', data: { confirm: 'Tem certeza?' } %>
+        </div>
+      </div>
+      <% if flag%2 != 0 %>
+          </div>
+          </div>
+      <% end %>
+      <% flag = flag+1 %>
+  <% end %>
+  <div class="text-right">
+    <a href="#">Ver todos <i class="fa fa-arrow-circle-right"></i></a>
+  </div>
   </tbody>
 </table>

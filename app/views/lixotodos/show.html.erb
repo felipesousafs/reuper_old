@@ -1,15 +1,26 @@
 <script>
     document.getElementById("menu-tabelas").className = 'active';
 </script>
-<p>
-  <strong>Residente:</strong>
-  <%= @lixotodo.residente_id %>
-</p>
 
-<p>
-  <strong>Data:</strong>
-  <%= @lixotodo.data %>
-</p>
+<div class="panel panel-default panel-lixotodo" style="border-top: none;">
+  <div class="panel-heading" style="background: #333; color: #eeeeee">
+    <h3 class="panel-title"><i class="fa fa-trash-o"></i> Residente registrado</h3>
+  </div>
+  <div class="panel-body">
+    <div class="list-group row">
+      <div class="col-lg-12">
+        <a href="/residentes/<%= @lixotodo.residente_id %>" class="list-group-item">
+          <i class="fa fa-fw fa-user"></i> <b>Residente: </b> &emsp;  &emsp;
+          <%= @lixotodo.residente.nome %>
+        </a>
+        <div class="list-group-item">
+          <i class="fa fa-fw fa-calendar"></i> <b>Data: </b> &emsp;  &emsp;
+          <%= @lixotodo.data %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_lixotodo_path(@lixotodo) %> |
-<%= link_to 'Back', lixotodos_path %>
+<%= link_to 'Editar', edit_lixotodo_path(@lixotodo) %> |
+<%= link_to 'Voltar', lixotodos_path %>

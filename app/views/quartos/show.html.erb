@@ -1,15 +1,25 @@
 <script>
     document.getElementById("menu-quartos").className = 'active';
 </script>
-<p>
-  <strong>Numero:</strong>
-  <%= @quarto.numero %>
-</p>
 
-<p>
-  <strong>Piso:</strong>
-  <%= @quarto.piso %>
-</p>
-
-<%= link_to 'Edit', edit_quarto_path(@quarto) %> |
-<%= link_to 'Back', quartos_path %>
+<div class="panel panel-default panel-lixotodo" style="border-top: none;">
+  <div class="panel-heading" style="background: #333; color: #eeeeee">
+    <h3 class="panel-title"><i class="fa fa-bed"></i>  Quarto </h3>
+  </div>
+  <div class="panel-body">
+    <div class="list-group row">
+      <div class="col-lg-12">
+        <div class="list-group-item">
+          <i class="fa fa-fw fa-hashtag"></i> <b>Numero: </b> &emsp;  &emsp;
+          <%= @quarto.numero %>
+        </div>
+        <div class="list-group-item">
+          <i class="fa fa-fw fa-building"></i> <b>Piso: </b> &emsp;  &emsp;
+          <%= @quarto.piso %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to 'Editar', edit_quarto_path(@quarto) %> |
+<%= link_to 'Voltar', quartos_path %>

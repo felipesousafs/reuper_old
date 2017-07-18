@@ -22,12 +22,24 @@ $success-text-color: #468847;
 
 
 .field_with_errors {
+
   display: inline;
-  label { color: $error-text-color; }
+  label {
+    color: $error-text-color;
+  }
+
   input[type=text], input[type=password], textarea {
     border: 1px solid rgba(189,74,72, 0.5);
     @include shadow(rgba(189,74,72, 0.2), 0px, 0px, 8px);
     &:focus { border: 1px solid rgba(189,74,72, 0.6); }
+
+  }
+}
+#error_explanation{
+  @extend .alert-danger;
+  @extend .alert;
+  h2{
+    display: none;
   }
 }
 .error_message {
@@ -43,14 +55,7 @@ $success-text-color: #468847;
 }
 
 
-#notice {
-  color: $success-text-color;
-  background-color: #DFF0D8;
-}
-#alert {
-  color: $error-text-color;
-  background-color: #F2DEDE;
-}
+
 .actions{
   @extend .form-group;
 }
