@@ -238,6 +238,7 @@ pt-BR:
       lixodone_html: "<div class=\"btn btn-success\"><i class=\"fa fa-fw fa-check-square-o\"></i> Finalizados</div>"
       update_lixotodo_html: "<div class=\"btn btn-primary\"><i class=\"fa fa-fw fa-refresh\"></i> Atualizar</div>"
       update_lixodone_html: "<div class=\"btn btn-primary\"><i class=\"fa fa-fw fa-refresh\"></i> Atualizar</div>"
+      lixo_pdf_html: "<div class=\"btn btn-gray\"><i class=\"fa fa-fw fa-refresh\"></i> Gerar PDF</div>"
   controller:
     lixotodos:
       name: Tabela de lixo a ser cumprida

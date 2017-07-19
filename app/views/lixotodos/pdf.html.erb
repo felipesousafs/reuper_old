@@ -1,30 +1,40 @@
-<header>
-  <div class="contact">
-    <p>Ralph Industries, LLC</p>
-    <p>32 Ralph Ln</p>
-    <p>Ralphsville, IN, RALPH</p>
-  </div>
-</header>
+<% @lixotodos = Lixotodo.order("data").limit(50) %>
+<% flag = 0 %>
+<style>
 
-<h1>Invoice</h1>
+</style>
 
-<table class="line-items">
-  <thead>
-  <tr>
-    <th class="quantity">Qty</th>
-    <th class="item-number">Item #</th>
-    <th class="description">Description</th>
-    <th class="unit-price">Unit Price</th>
-    <th class="total">Total</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-    <td>5</td>
-  </tr>
-  </tbody>
-</table>
+<div class="pdf-table">
+  <header>
+    <div class="table-title">
+      <b>TABELA DE RETIRADA DO LIXO</b>
+    </div>
+    <div class="table-description">
+      <p>
+        Tarefas: descartar o residuo contido nas lixeiras da cozinha e da area de serviço no deposito que fica em frente a Residencia Universitaria.
+      </p>
+    </div>
+  </header>
+  <table>
+    <tbody>
+    <% @lixotodos.each do |lixotodo| %>
+        <% if flag%2 == 0 %>
+        <div class="panel panel-default tupla-panel" >
+            <div class="panel-heading" style="background: #cfd0d1; color: #000000">
+              <h3 class="panel-title"> <%= l(lixotodo.data, :format => :long) %></h3>
+            </div>
+            <div class="item-group">
+        <% end %>
+                <div class="item">
+                  <b>Nome:</b> <%= lixotodo.residente.nome %> &emsp;  &emsp;
+                  <b>Quarto:</b> <%= lixotodo.residente.quarto.numero %> - <%= lixotodo.residente.quarto.piso %>
+                </div>
+        <% if flag%2 != 0 %>
+            </div>
+          </div>
+        <% end %>
+        <% flag = flag+1 %>
+    <% end %>
+    </tbody>
+  </table>
+</div>
