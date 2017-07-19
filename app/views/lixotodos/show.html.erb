@@ -21,6 +21,9 @@
     </div>
   </div>
 </div>
-
+<%= link_to "Download PDF",
+            lixotodo_download_path(@lixotodo, format: "pdf"),
+            target: "_blank",
+            class: "download" %>
 <%= link_to 'Editar', edit_lixotodo_path(@lixotodo) %> |
 <%= link_to 'Voltar', lixotodos_path %>

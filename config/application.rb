@@ -15,5 +15,7 @@ module Reuper
     config.time_zone = 'Brasilia'
 
     config.assets.paths << Rails.root.join("vendor", "assets", "fonts")
+
+    config.middleware.use PDFKit::Middleware
   end
 end

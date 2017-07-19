@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :lixodones
-  resources :lixotodos
+  resources :lixotodos do
+    resource :download, only: [:show]
+  end
   resources :quartos
   resources :cursos
   resources :residentes
