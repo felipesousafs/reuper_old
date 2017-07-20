@@ -4,7 +4,7 @@ class ResidentesController < ApplicationController
   # GET /residentes
   # GET /residentes.json
   def index
-    @residentes = Residente.all
+    @residentes = Residente.order("nome")
   end
 
   # GET /residentes/1

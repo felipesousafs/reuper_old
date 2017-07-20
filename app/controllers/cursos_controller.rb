@@ -4,7 +4,7 @@ class CursosController < ApplicationController
   # GET /cursos
   # GET /cursos.json
   def index
-    @cursos = Curso.all
+    @cursos = Curso.order("nome")
   end
 
   # GET /cursos/1

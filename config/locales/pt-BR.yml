@@ -233,12 +233,12 @@ pt-BR:
   modelo:
     title: "%{controller} cadastrados"
     btn:
-      adicionar_html: "<div class=\"btn btn-info\"><i class=\"fa fa-fw fa-plus\"></i> Adicionar manualmente</div>"
-      lixotodo_html: "<div class=\"btn btn-warning\"><i class=\"fa fa-fw fa-hourglass-start\"></i> A cumprir</div>"
-      lixodone_html: "<div class=\"btn btn-success\"><i class=\"fa fa-fw fa-check-square-o\"></i> Finalizados</div>"
-      update_lixotodo_html: "<div class=\"btn btn-primary\"><i class=\"fa fa-fw fa-refresh\"></i> Atualizar</div>"
-      update_lixodone_html: "<div class=\"btn btn-primary\"><i class=\"fa fa-fw fa-refresh\"></i> Atualizar</div>"
-      lixo_pdf_html: "<div class=\"btn btn-gray\"><i class=\"fa fa-fw fa-refresh\"></i> Gerar PDF</div>"
+      adicionar_html: "<div class=\"btn btn-info btn-reuper\"><i class=\"fa fa-fw fa-plus\"></i> <div class=\"btn-text\">Adicionar</div></div>"
+      lixotodo_html: "<div class=\"btn btn-warning\"><i class=\"fa fa-fw fa-hourglass-start\"></i> <div class=\"btn-text\">A cumprir</div></div>"
+      lixodone_html: "<div class=\"btn btn-success\"><i class=\"fa fa-fw fa-check-square-o\"></i> <div class=\"btn-text\">Finalizados</div></div>"
+      update_lixotodo_html: "<div class=\"btn btn-primary\"><i class=\"fa fa-fw fa-refresh\"></i> <div class=\"btn-text\">Atualizar</div></div>"
+      update_lixodone_html: "<div class=\"btn btn-primary\"><i class=\"fa fa-fw fa-refresh\"></i> <div class=\"btn-text\">Atualizar</div></div>"
+      lixo_pdf_html: "<div class=\"btn btn-default\"><i class=\"fa fa-fw fa-refresh\"></i> <div class=\"btn-text\">Gerar PDF</div></div>"
   controller:
     lixotodos:
       name: Tabela de lixo a ser cumprida

@@ -13,25 +13,32 @@ $success-text-color: #468847;
   font-family: $sans-serif-families;
   font-size: 14px;
 }
-.btn{
-  color: #fff;
+
+.btn-reuper{
+  width: 50px;
 }
-.btn-gray {
-  color: #fff;
-  background-color: #909090;
-  border-color: #6e6e6e;
+.btn-text{
+  display: none;
 }
-.btn-gray:focus,
-.btn-gray.focus {
-  color: #fff;
-  background-color: #909192;
-  border-color: #767778;
+
+
+@media (min-width: 801px){
+  .btn-reuper{
+    width: auto;
+  }
+  .btn-text{
+    display: inline;
+  }
+  .btn{
+    color: #fff;
+  }
+  .btn-default {
+    color: #fff;
+    background-color: #909090;
+    border-color: #6e6e6e;
+  }
 }
-.btn-gray:hover {
-  color: #fff;
-  background-color: #848484;
-  border-color: #656565;
-}
+
 
 @mixin shadow($color, $x, $y, $radius) {
   -moz-box-shadow: $color $x $y $radius;
