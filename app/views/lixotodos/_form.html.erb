@@ -30,7 +30,7 @@
         <%= f.text_field :res, :value => @lixotodo.residente.nome, :disabled => true %>
         <%= f.hidden_field :residente_id %>
       <% else %>
-          <%= select_tag "residente", options_from_collection_for_select(Residente.all, "id", "nome"), include_blank: true, id: "residenteid", data: { placeholder: "Escolha um residente" } %>
+          <%= select_tag "residente", options_from_collection_for_select(Residente.order("nome"), "id", "nome"), include_blank: true, id: "residenteid", data: { placeholder: "Escolha um residente" } %>
       <% end %>
     </div>
     <%= f.hidden_field :residente_id %>
