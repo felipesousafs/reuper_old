@@ -1,0 +1,582 @@
+[
+  {
+    "nome": "ABIMAEL OLIVEIRA SILVA",
+    "matricula": 2012973479,
+    "curso": "MEDICINA"
+  },
+  {
+    "nome": "ACILENE MOTA SANDES",
+    "matricula": 2014930550,
+    "curso": "ARQUEOLOGIA"
+  },
+  {
+    "nome": "ADRIANO CAVALCANTE FERREIRA",
+    "matricula": 20169006870,
+    "curso": "ENGENHARIA\nMECÂNICA"
+  },
+  {
+    "nome": "ÁGUIDA BONFIM DE OLIVEIRA",
+    "matricula": 20159031216,
+    "curso": "DESIGN DE MODA"
+  },
+  {
+    "nome": "ALANA LARISSA XIMENES SILVA",
+    "matricula": 2013930331,
+    "curso": "MEDICINA\nVETERINÁRIA"
+  },
+  {
+    "nome": "ALAN DE SOUSA COSTA",
+    "matricula": 201269883,
+    "curso": "ENGENHARIA ELÉTRICA"
+  },
+  {
+    "nome": "ALANA ASHELEY AQUINO ARAÚJO",
+    "matricula": 20159022389,
+    "curso": "MÚSICA"
+  },
+  {
+    "nome": "ALEX DHOUGLAS RODRIGUES DA\nSILVA",
+    "matricula": 20169012368,
+    "curso": "MÚSICA"
+  },
+  {
+    "nome": "ALEX JORGE MEDEIROS SILVA",
+    "matricula": 2012972079,
+    "curso": "MEDICINA"
+  },
+  {
+    "nome": "ANA CÉLIA DA CONCEIÇÃO",
+    "matricula": 201169681,
+    "curso": "NUTRIÇÃO"
+  },
+  {
+    "nome": "ANA JÉSSICA MATOS DE OLIVEIRA",
+    "matricula": 2013931348,
+    "curso": "MÚSICA"
+  },
+  {
+    "nome": "ANA PAULA BARROSO GUIMARÃES",
+    "matricula": 201268966,
+    "curso": "ENGENHARIA\nMECÂNICA"
+  },
+  {
+    "nome": "ANDREIA MARIA CHAVES MEDEIROS",
+    "matricula": 20169011683,
+    "curso": "ENGENHARIA\nMECÂNICA"
+  },
+  {
+    "nome": "ANTÔNIO PABLLO NUNES DE SOUSA",
+    "matricula": 201268115,
+    "curso": "ARQUITETURA"
+  },
+  {
+    "nome": "ANTÔNIO RUBENS DOS SANTOS DIAS",
+    "matricula": 2013936765,
+    "curso": "SERVIÇO SOCIAL"
+  },
+  {
+    "nome": "ANTÔNIO VALMIR DOS REIS PEREIRA",
+    "matricula": 20159012776,
+    "curso": "FÍSICA"
+  },
+  {
+    "nome": "ANTÔNIO FRANCISCO ASSUNÇÃO",
+    "matricula": 20159021185,
+    "curso": "ARQUEOLOGIA"
+  },
+  {
+    "nome": "ANTÔNIO VENÂNCIO RODRIGUES\nTORRES",
+    "matricula": 20159040556,
+    "curso": "ENGENHARIA\nMECÂNICA"
+  },
+  {
+    "nome": "ARIALDO JOSÉ DE LUCENA FURLANI",
+    "matricula": 2014907122,
+    "curso": "MÚSICA"
+  },
+  {
+    "nome": "AUAN RANGEL OLIVEIRA DE\nVASCONCELOS",
+    "matricula": 201201081,
+    "curso": "VETERINÁRIA"
+  },
+  {
+    "nome": "BEATRIZ CORDEIRO DE ARAÚJO",
+    "matricula": 2014925659,
+    "curso": "NUTRIÇÃO"
+  },
+  {
+    "nome": "BIANCA LOURRANY DOS SANTOS\nSILVA",
+    "matricula": 20159052065,
+    "curso": "NUTRIÇÃO"
+  },
+  {
+    "nome": "BRENDA LURIAM NASCIMENTO\nMEDEIROS",
+    "matricula": 2013913279,
+    "curso": "VETERINÁRIA"
+  },
+  {
+    "nome": "BRENDA LAYS DE SOUZA AGUIAR",
+    "matricula": 20159010566,
+    "curso": "ENGENHARIA DE\nPRODUÇÃO"
+  },
+  {
+    "nome": "CHARLES LIMA DOS SANTOS",
+    "matricula": 201177182,
+    "curso": "ENGENHARIA CIVIL"
+  },
+  {
+    "nome": "CLEIDIANE SILVA PEREIRA",
+    "matricula": 20169018915,
+    "curso": "LETRAS-PORTUGUÊS"
+  },
+  {
+    "nome": "DALVAN FORTALEZA ALENCAR",
+    "matricula": 2013935150,
+    "curso": "VETERINÁRIA"
+  },
+  {
+    "nome": "DANIEL SERAFIM DE ANDRADE\nRODRIGUES",
+    "matricula": 201201564,
+    "curso": "VETERINÁRIA"
+  },
+  {
+    "nome": "DENICULAS SANTOS FEITOSA",
+    "matricula": 20159036974,
+    "curso": "MATEMÁTICA"
+  },
+  {
+    "nome": "DENIS ANTÔNIO RIBEIRO DOS SANTOS",
+    "matricula": 201262800,
+    "curso": "ODONTOLOGIA"
+  },
+  {
+    "nome": "DIEGO DE OLIVEIRA GOMES",
+    "matricula": 20159029236,
+    "curso": "FÍSICA"
+  },
+  {
+    "nome": "DJESSICA LIMA DA SILVA",
+    "matricula": 20169031111,
+    "curso": "QUÍMICA"
+  },
+  {
+    "nome": "EDUARDO ADRIANO SANTOS",
+    "matricula": 20159003946,
+    "curso": "COMUNICAÇÃO SOCIAL"
+  },
+  {
+    "nome": "EDUARDO BARROSO DE CARVALHO\nJÚNIOR",
+    "matricula": 2013934143,
+    "curso": "ESTATÍSTICA"
+  },
+  {
+    "nome": "ÉRICA OLIVEIRA PAIXÃO",
+    "matricula": 2014913219,
+    "curso": "MÚSICA"
+  },
+  {
+    "nome": "FABIANA RODRIGUES DOS SANTOS",
+    "matricula": 2013912941,
+    "curso": "PEDAGOGIA"
+  },
+  {
+    "nome": "FELIPE AUGUSTO SILVA DE CASTRO",
+    "matricula": 201078344,
+    "curso": "ESTATÍSTICA"
+  },
+  {
+    "nome": "FELIPE MARÇAL DA SILVA",
+    "matricula": 20169003930,
+    "curso": "ESTATISTICA"
+  },
+  {
+    "nome": "FELIPE DE SOUSA SILVA",
+    "matricula": 201242736,
+    "curso": "COMPUTAÇÃO"
+  },
+  {
+    "nome": "FERNANDO DOS SANTOS MACHADO",
+    "matricula": 20159026154,
+    "curso": "CIÊNCIA POLÍTICA"
+  },
+  {
+    "nome": "FERNANDO DE LUCAS SILVA SALAZAR",
+    "matricula": 20159010619,
+    "curso": "LETRAS INGLÊS"
+  },
+  {
+    "nome": "FÁBIO RENAN GALVÃO SOARES",
+    "matricula": 2014954113,
+    "curso": "ENGENHARIA\nMECÂNICA"
+  },
+  {
+    "nome": "FLÁVIA APARECIDA BENVINDO\nGONÇALVES",
+    "matricula": 2013930799,
+    "curso": "FILOSOFIA"
+  },
+  {
+    "nome": "FRANCISCA DAMARIS RODRIGUES DE\nSOUSA",
+    "matricula": 2014914726,
+    "curso": "LETRAS"
+  },
+  {
+    "nome": "FRANCISCA RIANE RODRIGUES DA\nSILVA",
+    "matricula": 20159006750,
+    "curso": "LETRAS INGLÊS"
+  },
+  {
+    "nome": "FRANCISCO DAS CHAGAS VIEIRA\nFILHO",
+    "matricula": 2014917577,
+    "curso": "ENGENHARIA ELÉTRICA"
+  },
+  {
+    "nome": "FRANCISCO ALLISON MORAES DOS\nSANTOS",
+    "matricula": 20159021793,
+    "curso": "QUÍMICA"
+  },
+  {
+    "nome": "FRANCISCO ANTÔNIO DA SILVA",
+    "matricula": 2014907561,
+    "curso": "FÍSICA"
+  },
+  {
+    "nome": "FRANCISCO BRUNO DE OLIVEIRA LIMA",
+    "matricula": 2014960308,
+    "curso": "ENGENHARIA MECÂNICA"
+  },
+  {
+    "nome": "FRANK OLIVEIRA",
+    "matricula": 2014915760,
+    "curso": "ENGENHARIA CIVIL"
+  },
+  {
+    "nome": "FRANKLYN DOS SANTOS BRANDÃO",
+    "matricula": 20159004925,
+    "curso": "ENGENHARIA CIVIL"
+  },
+  {
+    "nome": "GABRIELA DE SOUSA ALVES\nGAMELEIRA",
+    "matricula": 20169035012,
+    "curso": "SERVIÇO SOCIAL"
+  },
+  {
+    "nome": "GLÓRIA MARIA ROCHA LUZ",
+    "matricula": 20159017647,
+    "curso": "MÚSICA"
+  },
+  {
+    "nome": "GENILSON FONSECA DE SOUSA",
+    "matricula": 20159011456,
+    "curso": "PEDAGOGIA"
+  },
+  {
+    "nome": "ISABELLA CUSTÓDIO DA SILVA MOTA",
+    "matricula": 20169010480,
+    "curso": "FARMÁCIA"
+  },
+  {
+    "nome": "ISAUIRA CRISTINA FROTA XIMENES",
+    "matricula": 2014929030,
+    "curso": "MATEMÁTICA"
+  },
+  {
+    "nome": "ISMAEL ARAÚJO FERNANDES",
+    "matricula": 20169015190,
+    "curso": "HISTÓRIA"
+  },
+  {
+    "nome": "JAN CLEIDE FONTES DA CONCEIÇÃO",
+    "matricula": 20169003968,
+    "curso": "EDUCAÇÃO FÍSICA"
+  },
+  {
+    "nome": "JANICE BRANDÃO DOS SANTOS",
+    "matricula": 2014915868,
+    "curso": "MÚSICA"
+  },
+  {
+    "nome": "JARBAS DE MORAES FERREIRA JÚNIOR",
+    "matricula": 2013938803,
+    "curso": "MÚSICA"
+  },
+  {
+    "nome": "JEOVÁ PEREIRA GOMES",
+    "matricula": 20159006868,
+    "curso": "COMPUTAÇÃO"
+  },
+  {
+    "nome": "JEFFERSON MORAES DE SOUSA",
+    "matricula": 201268204,
+    "curso": "ARQUITETURA"
+  },
+  {
+    "nome": "JOÃO GABRIEL MELO RODRIGUES",
+    "matricula": 20159016720,
+    "curso": "MEDICINA\nVETERINÁRIA"
+  },
+  {
+    "nome": "JOÃO PAULO DE CASTRO LOPES",
+    "matricula": 2014911232,
+    "curso": "MÚSICA"
+  },
+  {
+    "nome": "JOÃO PAULO FEITOSA DE SOUSA",
+    "matricula": 20159049239,
+    "curso": "FÍSICA"
+  },
+  {
+    "nome": "JONAS GOMES DA SILVA",
+    "matricula": 20149128301,
+    "curso": "ENGENHARIA DE\nAGRIMENSURA"
+  },
+  {
+    "nome": "JONATHAN ALVES DOS SANTOS",
+    "matricula": 2014950876,
+    "curso": "VETERINÁRIA"
+  },
+  {
+    "nome": "JHON CLEISON PEREIRA DA SILVA",
+    "matricula": 20169019690,
+    "curso": "ARQUITETURA"
+  },
+  {
+    "nome": "JORGE AUGUSTO BONFIM JUNIOR",
+    "matricula": 20169010882,
+    "curso": "ARTES VISUAIS"
+  },
+  {
+    "nome": "JORGE LUIZ DA SILVA VIANA",
+    "matricula": 201121024,
+    "curso": "LETRAS"
+  },
+  {
+    "nome": "JORGE FERNANDO RODRIGUES ROCHA",
+    "matricula": 20159046596,
+    "curso": "MEDICINA"
+  },
+  {
+    "nome": "JOSÉ MARIA DE ARAÚJO NETTO",
+    "matricula": 2010128532,
+    "curso": "ENGENHARIA ELÉTRICA"
+  },
+  {
+    "nome": "JOSÉ GOMES DA SILVA",
+    "matricula": 20169055839,
+    "curso": "LIBRAS"
+  },
+  {
+    "nome": "JOSÉ MÁRIO VERAS DE PINHO",
+    "matricula": 2014914940,
+    "curso": "FÍSICA"
+  },
+  {
+    "nome": "JOSÉ WILGNEY MIGUEL TEIXEIRA",
+    "matricula": 201240965,
+    "curso": "BIOLOGIA"
+  },
+  {
+    "nome": "JÚLIO NETO SOUTO BATISTA",
+    "matricula": 201167079,
+    "curso": "ODONTOLOGIA"
+  },
+  {
+    "nome": "KAIO CAMPELO CARVALHO",
+    "matricula": 201050890,
+    "curso": "GEOGRAFIA"
+  },
+  {
+    "nome": "LAECIO DE OLIVEIRA PINHEIRO",
+    "matricula": 2014938595,
+    "curso": "CIÊNCIAS ECONÔMICAS"
+  },
+  {
+    "nome": "LEANDRO DE SOUSA SILVA",
+    "matricula": 201149849,
+    "curso": "QUÍMICA"
+  },
+  {
+    "nome": "LUANA DA ROCHA ARAÚJO",
+    "matricula": 2014998430,
+    "curso": "FÍSICA"
+  },
+  {
+    "nome": "LUANA SAMPAIO DE ABREU",
+    "matricula": 2014926511,
+    "curso": "CIÊNCIAS SOCIAIS"
+  },
+  {
+    "nome": "LUNICEIDE MARQUIS DE SOUSA",
+    "matricula": 2014917460,
+    "curso": "ARQUEOLOGIA"
+  },
+  {
+    "nome": "LUENY DE MOURA VERAS",
+    "matricula": 2014955237,
+    "curso": "ODONTOLOGIA"
+  },
+  {
+    "nome": "LUMA DOS SANTOS SOUSA",
+    "matricula": 20159004184,
+    "curso": "MATEMÁTICA"
+  },
+  {
+    "nome": "MALUTARSIS DOS SANTOS CRUZ",
+    "matricula": 2013939696,
+    "curso": "SERVIÇO SOCIAL"
+  },
+  {
+    "nome": "MARA MACHADO DA CUNHA",
+    "matricula": 201126497,
+    "curso": "GEOGRAFIA"
+  },
+  {
+    "nome": "MARIA CLAUDIA BARBOSA OLIVEIRA",
+    "matricula": 20159016800,
+    "curso": "NUTRIÇÃO"
+  },
+  {
+    "nome": "MARIA ELIKÉSSIA WANNY DOS\nSANTOS",
+    "matricula": 2015112566880,
+    "curso": "MATEMÁTICA"
+  },
+  {
+    "nome": "MARIA VALDETE DA SILVA COUTINHO",
+    "matricula": 20149124705,
+    "curso": "CIÊNCIAS DA\nNATUREZA"
+  },
+  {
+    "nome": "MARIELE RANGEL RODRIGUES",
+    "matricula": 2014954552,
+    "curso": "GEOGRAFIA"
+  },
+  {
+    "nome": "MARYMARTA BARBOSA DE MORAIS",
+    "matricula": 20169010971,
+    "curso": "NUTRIÇÃO"
+  },
+  {
+    "nome": "MICHAEL HENRIQUE NUNES DO\nNASCIMENTO",
+    "matricula": 2014903553,
+    "curso": "CIÊNCIAS ECONÔMICAS"
+  },
+  {
+    "nome": "MIRIA ROBERTA PEREIRA DE ARAÚJO",
+    "matricula": 20169014184,
+    "curso": "QUÍMICA"
+  },
+  {
+    "nome": "MIKAELE MARIA DOS SANTOS",
+    "matricula": 20169032020,
+    "curso": "CIÊNCIAS DA\nNATUREZA"
+  },
+  {
+    "nome": "MIQUELYNA RIBEIRO MENEZES",
+    "matricula": 201177128,
+    "curso": "ENGENHARIA CIVIL"
+  },
+  {
+    "nome": "MONICA MARIA NAZARE RODRIGUES\nDE SOUSA",
+    "matricula": 20159051059,
+    "curso": "CIÊNCIAS BIOLÓGICAS"
+  },
+  {
+    "nome": "NATANAEL NESTOR MACIEL LOPES",
+    "matricula": 20149112534,
+    "curso": "MÚSICA"
+  },
+  {
+    "nome": "OSVALDO PEREIRA NUNES JÚNIOR",
+    "matricula": 20159043496,
+    "curso": "CIÊNCIAS BIOLÓGICAS"
+  },
+  {
+    "nome": "PAULO VITOR RIBEIRO PLÁSSIDO",
+    "matricula": 201266003,
+    "curso": "ENGENHARIA\nMECÂNICA"
+  },
+  {
+    "nome": "PAULO ORMANO SOUSA COSTA",
+    "matricula": 2013937109,
+    "curso": "MÚSICA"
+  },
+  {
+    "nome": "PEDRO FERREIRA DA SILVA NETO",
+    "matricula": 201269426,
+    "curso": "ENGENHARIA\nMECÂNICA"
+  },
+  {
+    "nome": "PEDRO HENRIQUE LIMA",
+    "matricula": 201265356,
+    "curso": "ENGENHARIA CIVIL"
+  },
+  {
+    "nome": "PEDRO HENRIQUE SANTOS DE\nOLIVEIRA",
+    "matricula": 201207773,
+    "curso": "ARTES VISUAIS"
+  },
+  {
+    "nome": "RAFAEL SANTANA DE CARVALHO",
+    "matricula": 2014955157,
+    "curso": "ENGENHARIA ELÉTRICA"
+  },
+  {
+    "nome": "RENAN PINHEIRO DOS SANTOS",
+    "matricula": 20159011456,
+    "curso": "MÚSICA"
+  },
+  {
+    "nome": "RUI DE JESUS ARAÚJO",
+    "matricula": 2010130361,
+    "curso": "ENGENHARIA CIVIL"
+  },
+  {
+    "nome": "SÉRGIO GONÇALVES DOS SANTOS",
+    "matricula": 20159031708,
+    "curso": "CIÊNCIAS ECONÔMICAS"
+  },
+  {
+    "nome": "TATIANA SOUSA DE OLIVEIRA",
+    "matricula": 2013958824,
+    "curso": "EDUCAÇÃO FÍSICA"
+  },
+  {
+    "nome": "THIAGO SOUSA DA SILVA",
+    "matricula": 201200530,
+    "curso": "VETERINÁRIA"
+  },
+  {
+    "nome": "TIAGO LUÍS DUARTE CRUZ",
+    "matricula": 200958220,
+    "curso": "ENGENHARIA ELÉTRICA"
+  },
+  {
+    "nome": "ULLYSSES DE SOUSA RODRIGUES",
+    "matricula": 20169024117,
+    "curso": "DIREITO"
+  },
+  {
+    "nome": "VALÉRIA SILVA CARIOCA",
+    "matricula": 201206598,
+    "curso": "PEDAGOGIA"
+  },
+  {
+    "nome": "VALFRIM VIANA DE MOARES",
+    "matricula": 20159053287,
+    "curso": "FÍSICA"
+  },
+  {
+    "nome": "WALISON CASTRO OLIVEIRA",
+    "matricula": 20159031207,
+    "curso": "ENGENHARIA CARTOGRÁFICA"
+  },
+  {
+    "nome": "WERBSON SOUSA SILVA E SILVA",
+    "matricula": 2014948063,
+    "curso": "ADMINISTRAÇÃO"
+  },
+  {
+    "nome": "YASMIN FEITOSA CARVALHO DE\nMORAES",
+    "matricula": 2013922509,
+    "curso": "SERVIÇO SOCIAL"
+  }
+]

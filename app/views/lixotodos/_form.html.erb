@@ -26,14 +26,15 @@
   <div class="form-group">
     <%= f.label :residente_id %>
     <div class="col-sm-10">
-      <% if !:residente_id %>
+      <% if action_name.to_s.casecmp('edit')==0 %>
         <%= f.text_field :res, :value => @lixotodo.residente.nome, :disabled => true %>
         <%= f.hidden_field :residente_id %>
       <% else %>
           <%= select_tag "residente", options_from_collection_for_select(Residente.order("nome"), "id", "nome"), include_blank: true, id: "residenteid", data: { placeholder: "Escolha um residente" } %>
+          <%= f.hidden_field :residente_id %>
       <% end %>
     </div>
-    <%= f.hidden_field :residente_id %>
+
   </div>
 
   <div class="form-group">

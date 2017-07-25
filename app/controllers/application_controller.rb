@@ -1,6 +1,37 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+
+  def populate_residentes
+
+    Residente.destroy_all
+    file = File.read('app/assets/images/residentes.json')
+    json = JSON.parse(file)
+
+    matricula = 20120001
+    json.each do |elemento|
+      Residente.create(matricula: matricula, nome: elemento['nome'], curso_id: 1, quarto_id: 1)
+      matricula = matricula+1
+    end
+
+    file2 = File.read('app/assets/images/matriculas_cursos.json')
+    json2 = JSON.parse(file2)
+
+    json2.each do |registro|
+      residente = Residente.where(nome: registro['nome']).first
+      if !residente.nil?
+        curso_nome = registro['curso']
+        curso = Curso.find_by_nome(curso_nome.to_s)
+          residente.update(
+              matricula: registro['matricula'],
+              curso_id: curso.id
+          )
+      end
+    end
+
+    redirect_to residentes_path
+  end
+
   def populate_lixotodos
     @residentes = Residente.order('nome')
     last = Lixotodo.last
