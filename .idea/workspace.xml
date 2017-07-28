@@ -38,28 +38,8 @@
       <file leaf-file-name="20170707115207_create_residentes.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20170707115207_create_residentes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20170707115957_create_lixotodos.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20170707115957_create_lixotodos.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20170707120009_create_lixodones.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20170707120009_create_lixodones.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+            <state relative-caret-position="187">
+              <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -195,9 +175,9 @@
         <option value="$PROJECT_DIR$/app/views/lixotodos/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/lixotodos/pdf.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/db/migrate/20170707120009_create_lixodones.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20170707115957_create_lixotodos.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20170707115207_create_residentes.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20170707115957_create_lixotodos.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20170707120009_create_lixodones.rb" />
       </list>
     </option>
   </component>
@@ -654,7 +634,7 @@
       <workItem from="1501055721481" duration="1287000" />
       <workItem from="1501142240634" duration="595000" />
       <workItem from="1501173304459" duration="2647000" />
-      <workItem from="1501239698483" duration="1297000" />
+      <workItem from="1501239698483" duration="1751000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do esqueleto da aplicação + Relacionamentos">
       <created>1499434830976</created>
@@ -740,11 +720,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500994721583</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[Remove] &quot;_id&quot; do atributo foreign key em Residentes e em lixotodo e lixodone">
+      <created>1501240999149</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1501240999149</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175894000" />
+    <option name="totallyTimeSpent" value="176348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -1123,26 +1110,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20170707120009_create_lixodones.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20170707192729_create_periodos.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20170707115957_create_lixotodos.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1155,10 +1126,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20170707120009_create_lixodones.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20170707115957_create_lixotodos.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20170707115207_create_residentes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="187">
+          <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="41" />
           <folding />
         </state>
       </provider>

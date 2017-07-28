@@ -6,6 +6,6 @@ class CreateLixodones < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
-    add_reference :lixodones, :residente, foreign_key: true
+    add_reference :lixodones, :residente_id, foreign_key: true
   end
 end
