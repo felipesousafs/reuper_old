@@ -1,12 +1,10 @@
 class DownloadsController < ApplicationController
   def show
-    respond_to do |format|
-      format.pdf { send_lixotodo_pdf }
-
-      if Rails.env.development?
-        format.html { render_sample_html }
-      end
-    end
+    send_lixotodo_pdf
+    # respond_to do |format|
+    #   format.pdf { send_lixotodo_pdf }
+    #   format.html { render_sample_html }
+    # end
   end
 
   private
