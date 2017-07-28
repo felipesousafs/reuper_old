@@ -8,11 +8,11 @@
 
 # ruby encoding: utf-8
 
-ActiveRecord::Base.connection.execute("TRUNCATE quartos RESTART IDENTITY")
-ActiveRecord::Base.connection.execute("TRUNCATE cursos RESTART IDENTITY")
-ActiveRecord::Base.connection.execute("TRUNCATE residentes RESTART IDENTITY")
-ActiveRecord::Base.connection.execute("TRUNCATE lixotodos RESTART IDENTITY")
-ActiveRecord::Base.connection.execute("TRUNCATE lixodones RESTART IDENTITY")
+ActiveRecord::Base.connection.execute("TRUNCATE quartos, cursos, residentes, lixotodos, lixodones RESTART IDENTITY")
+# ActiveRecord::Base.connection.execute("TRUNCATE cursos RESTART IDENTITY")
+# ActiveRecord::Base.connection.execute("TRUNCATE residentes RESTART IDENTITY")
+# ActiveRecord::Base.connection.execute("TRUNCATE lixotodos RESTART IDENTITY")
+# ActiveRecord::Base.connection.execute("TRUNCATE lixodones RESTART IDENTITY")
 
 
 #Criar quartos
