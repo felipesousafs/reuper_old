@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-
+###
   def populate_residentes
 
     Residente.destroy_all
