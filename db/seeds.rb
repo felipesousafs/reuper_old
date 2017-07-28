@@ -14,7 +14,8 @@ ActiveRecord::Base.connection.execute("TRUNCATE quartos, cursos, residentes, lix
 # ActiveRecord::Base.connection.execute("TRUNCATE lixotodos RESTART IDENTITY")
 # ActiveRecord::Base.connection.execute("TRUNCATE lixodones RESTART IDENTITY")
 
-
+#Cria periodo
+Periodo.create(start: Date.new(2017, 3, 8), end: Date.new(2017, 7, 12))
 #Criar quartos
 Quarto.create(numero: 1, piso: 'Inferior')
 Quarto.create(numero: 2, piso: 'Inferior')
