@@ -1,5 +1,7 @@
 class CursosController < ApplicationController
   before_action :set_curso, only: [:show, :edit, :update, :destroy]
+  before_filter :require_authentication,
+                :only => [:new, :edit, :create, :update, :destroy]
 
   # GET /cursos
   # GET /cursos.json

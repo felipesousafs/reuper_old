@@ -1,5 +1,7 @@
 class QuartosController < ApplicationController
   before_action :set_quarto, only: [:show, :edit, :update, :destroy]
+  before_filter :require_authentication,
+                :only => [:new, :edit, :create, :update, :destroy]
 
   # GET /quartos
   # GET /quartos.json

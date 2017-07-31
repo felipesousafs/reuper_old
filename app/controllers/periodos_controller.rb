@@ -1,4 +1,5 @@
 class PeriodosController < ApplicationController
+
   def new
     @periodo = Periodo.new
   end

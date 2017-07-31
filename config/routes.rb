@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :lixodones
   resources :lixotodos do
     resource :download, only: [:show]
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   resources :cursos
   resources :residentes
   resources :periodos
+  resource :user_sessions, :only => [:create, :new, :destroy]
 
   root :to => "residentes#index"
   get 'tabela/lixo', to: 'downloads#show', as: 'tabela/lixo'

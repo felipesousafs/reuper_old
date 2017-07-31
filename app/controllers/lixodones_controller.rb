@@ -1,5 +1,7 @@
 class LixodonesController < ApplicationController
   before_action :set_lixodone, only: [:show, :edit, :update, :destroy]
+  before_filter :require_authentication,
+                :only => [:new, :edit, :create, :update, :destroy]
 
   # GET /lixodones
   # GET /lixodones.json
