@@ -1,10 +1,16 @@
 class DownloadsController < ApplicationController
+  layout "lixotodos_pdf"
   def show
-    send_lixotodo_pdf
-    # respond_to do |format|
-    #   format.pdf { send_lixotodo_pdf }
-    #   format.html { render_sample_html }
-    # end
+    respond_to do |format|
+      format.html
+      format.pdf {send_lixotodo_pdf}
+    end
+  end
+
+  def name
+    respond_to do |format|
+      format.html { "PDF" }
+    end
   end
 
   private

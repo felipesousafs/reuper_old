@@ -8,8 +8,10 @@ class Download
   end
 
   def to_pdf
-    kit = PDFKit.new(as_html)
-    kit.to_file("tmp/invoice.pdf")
+    pdf = Prawn::Document.new
+    pdf.text 'Hello World'
+    # kit = PDFKit.new(as_html)
+    # kit.to_file("tmp/invoice.pdf")
   end
 
   def filename

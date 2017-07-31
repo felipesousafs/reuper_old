@@ -52,6 +52,14 @@ gem 'pdfkit'
 gem 'render_anywhere'
 gem 'wkhtmltopdf-binary'
 
+#Prawn PDF generator
+gem 'prawn'
+gem 'pdf-core'
+
+#responder
+gem 'responders'
+
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
