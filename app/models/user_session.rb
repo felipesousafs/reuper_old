@@ -30,6 +30,9 @@ class UserSession
   def current_user
     User.find(@session[:user_id])
   end
+  def current_user_name
+    User.find(@session[:user_id]).full_name.split(" ")
+  end
   def user_signed_in?
     @session[:user_id].present?
   end

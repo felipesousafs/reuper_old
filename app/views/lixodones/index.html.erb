@@ -19,8 +19,13 @@
           </a>
         </div>
         <div class="col-md-3 list-group-item" style="border: none;">
-          <a class="label label-default" href="<%= edit_lixodone_path(lixodone) %>">Editar</a>
-          <%= link_to t('.destroy'), lixodone, method: :delete, :class => 'label label-danger', data: { confirm: 'Tem certeza?' } %>
+          <% if user_signed_in? %>
+            <a class="label label-default" href="<%= edit_lixodone_path(lixodone) %>">Editar</a>
+            <%= link_to t('.destroy'), lixodone, method: :delete, :class => 'label label-danger', data: { confirm: 'Tem certeza?' } %>
+          <% else %>
+              <button class="label label-default btn" disabled="disabled">Editar</button>
+              <button class="label label-danger btn" disabled="disabled">Excluir registro</button>
+          <% end %>
         </div>
       </div>
       <% if flag%2 != 0 %>

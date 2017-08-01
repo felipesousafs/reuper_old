@@ -1,11 +1,13 @@
 <%= link_to render(partial: 'layouts/ttip_lixotodo'), lixotodos_path %>
 <%= link_to render(partial: 'layouts/ttip_lixodone'), lixodones_path %>
-<% if controller_name == 'lixotodos' %>
-    <%= link_to render(partial: 'layouts/ttip_update_lixotodo'), populate_lixotodos_path %>
-    <%= link_to render(partial: 'layouts/ttip_pdf'),
-                tabela_lixo_path(format: "pdf"),
-                target: "_blank",
-                class: "download" %>
-<% else %>
-    <%= link_to render(partial: 'layouts/ttip_update_lixodone'), refresh_lixodones_path %>
+<% if user_signed_in? %>
+  <% if controller_name == 'lixotodos' %>
+      <%= link_to render(partial: 'layouts/ttip_update_lixotodo'), populate_lixotodos_path %>
+      <%= link_to render(partial: 'layouts/ttip_pdf'),
+                  tabela_lixo_path(format: "pdf"),
+                  target: "_blank",
+                  class: "download" %>
+  <% else %>
+      <%= link_to render(partial: 'layouts/ttip_update_lixodone'), refresh_lixodones_path %>
+  <% end %>
 <% end %>

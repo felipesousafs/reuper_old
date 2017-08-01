@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_filter :can_change, :only => [:edit, :update]
   before_filter :require_no_authentication, :only => [:new, :create]
+  before_filter :require_authentication, :only => [:index, :show, :edit, :update, :destroy]
+
 
   # GET /users
   # GET /users.json

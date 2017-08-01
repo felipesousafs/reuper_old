@@ -13,8 +13,13 @@
             </a>
           </div>
           <div class="col-md-3 list-group-item" style="border: none;">
-            <a class="label label-default" href="<%= edit_curso_path(curso) %>">Editar</a>
-            <%= link_to t('.destroy'), curso, method: :delete, :class => 'label label-danger', data: { confirm: 'Are you sure?' } %>
+            <% if user_signed_in? %>
+              <a class="label label-default" href="<%= edit_curso_path(curso) %>">Editar</a>
+              <%= link_to t('.destroy'), curso, method: :delete, :class => 'label label-danger', data: { confirm: 'Are you sure?' } %>
+            <% else %>
+              <button class="label label-default btn" disabled="disabled">Editar</button>
+              <button class="label label-danger btn" disabled="disabled">Excluir registro</button>
+            <% end %>
           </div>
         </div>
       </tr>

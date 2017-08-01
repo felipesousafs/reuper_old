@@ -12,8 +12,13 @@
             </a>
           </div>
           <div class="col-md-3 list-group-item" style="border: none;">
-            <a class="label label-default" href="<%= edit_quarto_path(quarto) %>">Editar</a>
-            <%= link_to t('.destroy'), quarto, method: :delete, :class => 'label label-danger', data: { confirm: 'Are you sure?' } %>
+            <% if user_signed_in? %>
+              <a class="label label-default" href="<%= edit_quarto_path(quarto) %>">Editar</a>
+              <%= link_to t('.destroy'), quarto, method: :delete, :class => 'label label-danger', data: { confirm: 'Are you sure?' } %>
+            <% else %>
+                <button class="label label-default btn" disabled="disabled">Editar</button>
+                <button class="label label-danger btn" disabled="disabled">Excluir registro</button>
+            <% end %>
           </div>
         </div>
       </tr>

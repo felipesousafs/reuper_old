@@ -198,3 +198,45 @@ form{
   visibility: visible;
   opacity: 0.97;
 }
+
+.dropbtn {
+  min-width: 150px;
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.dropdn {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdn-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdn-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdn-content a:hover {background-color: #f1f1f1}
+
+.dropdn:hover .dropdn-content {
+  display: block;
+}
+
+.dropdn:hover .dropbtn {
+  background-color: rgba(0, 84, 100, 0.46);
+}

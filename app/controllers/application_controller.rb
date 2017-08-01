@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   delegate :current_user, :user_signed_in?, :to => :user_session
   helper_method :current_user, :user_signed_in?
+  before_filter :require_authentication,
+                :only => [:populate_lixotodos, :populate_residentes, :populate_lixodones]
 
 
   #Autenticação de usuario DO

@@ -5,4 +5,5 @@ module ApplicationHelper
                   :class => 'error_message'
     end
   end
+
 end

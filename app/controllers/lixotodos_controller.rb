@@ -4,7 +4,6 @@ class LixotodosController < ApplicationController
                 :only => [:new, :edit, :create, :update, :destroy]
 
 
-
   # GET /lixotodos
   # GET /lixotodos.json
   def index
