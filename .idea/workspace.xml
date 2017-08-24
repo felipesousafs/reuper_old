@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28e77e81-357f-4c12-8fd5-121d2866c3eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/zebra_datepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jquery-ui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/zebra_datepicker.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/lixotodos/_tupla.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/heroku.tar.gz" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/reuper.iml" afterPath="$PROJECT_DIR$/.idea/reuper.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/default.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/default.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/lixotodos_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/lixotodos_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user_session.rb" afterPath="$PROJECT_DIR$/app/models/user_session.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_user_navbar.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_user_navbar.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lixodones/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/lixodones/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lixotodos/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/lixotodos/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -50,25 +34,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/lixotodos/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+            <state relative-caret-position="459">
+              <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="222" column="14" lean-forward="false" selection-start-line="222" selection-start-column="14" selection-end-line="222" selection-end-column="14" />
+            <state relative-caret-position="361">
+              <caret line="210" column="13" lean-forward="false" selection-start-line="210" selection-start-column="13" selection-end-line="210" selection-end-column="13" />
               <folding>
-                <marker date="1503577068206" expanded="true" signature="5163:5198" ph="..." />
-                <marker date="1503577068206" expanded="true" signature="5258:5264" ph=" " />
-                <marker date="1503577068206" expanded="true" signature="5264:5270" ph=" " />
+                <marker date="1503578208619" expanded="true" signature="5163:5198" ph="..." />
+                <marker date="1503578208619" expanded="true" signature="5258:5264" ph=" " />
+                <marker date="1503578208619" expanded="true" signature="5264:5270" ph=" " />
               </folding>
             </state>
           </provider>
@@ -117,8 +101,8 @@
       <file leaf-file-name="_tupla.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/lixotodos/_tupla.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="170">
+              <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="e#703#709#0#HTML" expanded="true" />
@@ -236,9 +220,9 @@
         <option value="$PROJECT_DIR$/app/views/lixotodos/tupla.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/lixotodos_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/lixotodos/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/lixotodos/_tupla.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/lixotodos/_form.html.erb" />
       </list>
     </option>
   </component>
@@ -800,7 +784,7 @@
       <workItem from="1503054619596" duration="1853000" />
       <workItem from="1503314827014" duration="9007000" />
       <workItem from="1503485974314" duration="13618000" />
-      <workItem from="1503572644321" duration="3753000" />
+      <workItem from="1503572644321" duration="10084000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do esqueleto da aplicação + Relacionamentos">
       <created>1499434830976</created>
@@ -991,11 +975,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501677514275</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="[UPDATE] &quot;Edit lixotodo&quot;: Adicionado radio para selecionar qual residente será substituido ao alterar a data da tarefa.">
+      <created>1503577182634</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1503577182634</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253913000" />
+    <option name="totallyTimeSpent" value="260244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -1028,7 +1019,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Criação do esqueleto da aplicação + Relacionamentos" />
     <MESSAGE value="[ADD] Periodo&#10;[ADD] Method to Populate table lixotodo" />
     <MESSAGE value="[ADD] Começando a adicionar um pouco de front-end com Bootstrap" />
     <MESSAGE value="[ADD] Front-end" />
@@ -1053,7 +1043,8 @@
     <MESSAGE value="[ADD] User auth" />
     <MESSAGE value="[ADD] Controle de acesso" />
     <MESSAGE value="[ADD] Precompiled assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Precompiled assets" />
+    <MESSAGE value="[UPDATE] &quot;Edit lixotodo&quot;: Adicionado radio para selecionar qual residente será substituido ao alterar a data da tarefa." />
+    <option name="LAST_COMMIT_MESSAGE" value="[UPDATE] &quot;Edit lixotodo&quot;: Adicionado radio para selecionar qual residente será substituido ao alterar a data da tarefa." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1359,26 +1350,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="113" column="2" lean-forward="false" selection-start-line="113" selection-start-column="2" selection-end-line="113" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/lixotodos/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/lixotodos/_tupla.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        <state relative-caret-position="170">
+          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="e#703#709#0#HTML" expanded="true" />
@@ -1390,15 +1365,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="113" column="2" lean-forward="false" selection-start-line="113" selection-start-column="2" selection-end-line="113" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="222" column="14" lean-forward="false" selection-start-line="222" selection-start-column="14" selection-end-line="222" selection-end-column="14" />
+        <state relative-caret-position="361">
+          <caret line="210" column="13" lean-forward="false" selection-start-line="210" selection-start-column="13" selection-end-line="210" selection-end-column="13" />
           <folding>
-            <marker date="1503577068206" expanded="true" signature="5163:5198" ph="..." />
-            <marker date="1503577068206" expanded="true" signature="5258:5264" ph=" " />
-            <marker date="1503577068206" expanded="true" signature="5264:5270" ph=" " />
+            <marker date="1503578208619" expanded="true" signature="5163:5198" ph="..." />
+            <marker date="1503578208619" expanded="true" signature="5258:5264" ph=" " />
+            <marker date="1503578208619" expanded="true" signature="5264:5270" ph=" " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/lixotodos/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

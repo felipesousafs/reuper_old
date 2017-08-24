@@ -5,17 +5,31 @@
         var valor = document.getElementsByTagName("option")[x].value;
         document.getElementById("lixotodo_residente_id").setAttribute("value", valor);
 
-        var lixotodo_id = document.getElementById("lixotodo_data");
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                alert("Substituido com sucesso. ID: "+lixotodo_id.value);
-//                document.getElementById("tupla").innerHTML =
-//                    this.responseText;
+    }
+    function change_lixotodo_item() {
+        var lixotodo_id;
+        var radio1 = document.getElementById("radio1");
+        if (radio1.checked) {
+            alert("Checked! " + radio1.value);
+            lixotodo_id = radio1.value;
+        } else {
+            var radio2 = document.getElementById("radio2");
+            alert("Not Checked! " + radio2.value);
+            lixotodo_id = radio2.value;
+        }
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
             }
-        };
-        xhttp.open("DELETE", "/lixotodos/"+lixotodo_id.value, true);
-        xhttp.send();
+        });
+
+        $.ajax({
+            type: "DELETE",
+            url: "/lixotodos/"+lixotodo_id
+        });
+
+        alert("Passou do OPEN. ID: "+lixotodo_id);
     }
 
 </script>
@@ -64,7 +78,7 @@
 
     <div class="actions">
       <div class="col-sm-offset-2 col-sm-10">
-        <%= f.submit %>
+        <%= f.submit :onclick => "change_lixotodo_item()" %>
       </div>
     </div>
 
