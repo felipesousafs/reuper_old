@@ -1,0 +1,33 @@
+<div class="col-sm-2">
+</div>
+<div class="col-sm-10">
+  <div class="panel panel-default panel-lixotodo" style="border-top: none;">
+    <div class="panel-heading" style="background: #333333; color: #ffffff">
+      <h3 style="text-align: center;" class="panel-title"><i class="fa fa-trash-o"></i> Selecione o residente a ser
+        substituído</h3>
+    </div>
+    <div class="panel-body">
+      <div class="list-group row">
+        <div class="col-lg-10">
+          <label class="list-group-item" id="residente1" for="radio1" style="width: 100%; text-align: left;">
+            <input class="form-check-input" type="radio" name="radio" id="radio1" value="<%= @lixotodos.first.id %>" checked>
+            &emsp; &emsp;
+            <i class="fa fa-fw fa-user"></i> <b>Residente: </b>
+            <%= @lixotodos.first.residente.nome %>
+          </label>
+        </div>
+      </div>
+      <div class="list-group row">
+        <div class="col-lg-10">
+          <label class="list-group-item" id="residente2" for="radio2" style="width: 100%; text-align: left;">
+            <input class="form-check-input" type="radio" name="radio" id="radio2" value="<%= @lixotodos.last.id %>">
+            &emsp; &emsp;
+            <i class="fa fa-fw fa-user"></i> <b>Residente: </b>
+            <%= @lixotodos.last.residente.nome %>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a id="bt_teste" onclick="return getRadioItem()">Teste</a>
+</div>

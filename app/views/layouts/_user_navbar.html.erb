@@ -2,7 +2,7 @@
 
 
   <li class="dropdn">
-    <button class="dropbtn"><i class="fa fa-user"></i> <%= current_user.full_name.split(' ').first %> <b class="caret"></b> </button>
+    <button class="dropbtn"><i class="fa fa-user-circle-o"></i> <%= current_user.full_name.split(' ').first %> <b class="caret"></b> </button>
     <ul class="dropdn-content dropdown-menu" style="margin-top: -1px; border-top-right-radius: 0px; border-top-left-radius: 0px; z-index: 0;">
       <li>
         <a href="<%= user_path(current_user) %>"><i class="fa fa-fw fa-user"></i> Meu Perfil</a>

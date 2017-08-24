@@ -31,11 +31,11 @@ class LixotodosController < ApplicationController
 
     respond_to do |format|
       if @lixotodo.save
-        format.html { redirect_to @lixotodo, notice: 'Lixotodo was successfully created.' }
-        format.json { render :show, status: :created, location: @lixotodo }
+        format.html {redirect_to @lixotodo, notice: 'Registro criado com sucesso!'}
+        format.json {render :show, status: :created, location: @lixotodo}
       else
-        format.html { render :new }
-        format.json { render json: @lixotodo.errors, status: :unprocessable_entity }
+        format.html {render :new}
+        format.json {render json: @lixotodo.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -45,38 +45,50 @@ class LixotodosController < ApplicationController
   def update
     respond_to do |format|
       if @lixotodo.update(lixotodo_params)
-        format.html { redirect_to @lixotodo, notice: 'Lixotodo was successfully updated.' }
-        format.json { render :show, status: :ok, location: @lixotodo }
+        refresh_lixotodo_after_edit(@lixotodo)
+        format.html {redirect_to populate_lixotodos_path, notice: 'Tabela de lixo atualizada com sucesso.'}
+        format.json {render :show, status: :ok, location: @lixotodo}
       else
-        format.html { render :edit }
-        format.json { render json: @lixotodo.errors, status: :unprocessable_entity }
+        format.html {render :edit}
+        format.json {render json: @lixotodo.errors, status: :unprocessable_entity}
       end
     end
   end
 
   def name
     respond_to do |format|
-      format.html { "Tabela de lixo a ser cumprida" }
+      format.html {"Tabela de lixo a ser cumprida"}
     end
   end
+
   # DELETE /lixotodos/1
   # DELETE /lixotodos/1.json
   def destroy
     @lixotodo.destroy
     respond_to do |format|
-      format.html { redirect_to lixotodos_url, notice: 'Lixotodo was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html {redirect_to lixotodos_url, notice: 'Registro excluído com sucesso.'}
+      format.json {head :no_content}
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_lixotodo
-      @lixotodo = Lixotodo.find(params[:id])
-    end
+  def tupla
+    @lixotodos = Lixotodo.where("data = ?", params[:data])
+    render :partial => "tupla", locals: {lixotodos: @lixotodos}
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def lixotodo_params
-      params.require(:lixotodo).permit(:residente_id, :data)
-    end
+    # respond_to do |f|
+    #   f.html { @lixotodos }
+    # end
+
+  end
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_lixotodo
+    @lixotodo = Lixotodo.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def lixotodo_params
+    params.require(:lixotodo).permit(:residente_id, :data)
+  end
 end

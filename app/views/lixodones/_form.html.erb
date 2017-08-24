@@ -1,32 +1,40 @@
-<%= form_for(lixodone) do |f| %>
+<script>
+    function checkform() {
+        var x = document.getElementById("residenteid").selectedIndex;
+        var valor = document.getElementsByTagName("option")[x].value;
+        document.getElementById("lixodone_residente_id").setAttribute("value", valor);
+    }
+</script>
+<%= form_for(lixodone, :html=>{:name=>"f",:onsubmit=>"return checkform();"}) do |f| %>
     <div class="form-group" style="border-bottom: double 1px #dddddd;">
       <div class="col-sm-10">
         <h5>Adicionar residente manualmente à tabela</h5>
       </div>
     </div>
-  <% if lixodone.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(lixodone.errors.count, "error") %> prohibited this lixodone from being saved:</h2>
+    <% if lixodone.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(lixodone.errors.count, "error") %> prohibited this lixotodo from being saved:</h2>
 
-      <ul>
-      <% lixodone.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% lixodone.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
     <div class="form-group">
       <%= f.label :residente_id %>
       <div class="col-sm-10">
-        <% if !:residente_id %>
+        <% if action_name.to_s.casecmp('edit')==0 %>
             <%= f.text_field :res, :value => @lixodone.residente.nome, :disabled => true %>
             <%= f.hidden_field :residente_id %>
         <% else %>
             <%= select_tag "residente", options_from_collection_for_select(Residente.order("nome"), "id", "nome"), include_blank: true, id: "residenteid", data: { placeholder: "Escolha um residente" } %>
+            <%= f.hidden_field :residente_id %>
         <% end %>
       </div>
-      <%= f.hidden_field :residente_id %>
+
     </div>
 
     <div class="form-group">
@@ -42,3 +50,4 @@
       </div>
     </div>
 <% end %>
+

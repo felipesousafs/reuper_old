@@ -1,53 +1,71 @@
 <script>
+
     function checkform() {
         var x = document.getElementById("residenteid").selectedIndex;
         var valor = document.getElementsByTagName("option")[x].value;
         document.getElementById("lixotodo_residente_id").setAttribute("value", valor);
+
+        var lixotodo_id = document.getElementById("lixotodo_data");
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                alert("Substituido com sucesso. ID: "+lixotodo_id.value);
+//                document.getElementById("tupla").innerHTML =
+//                    this.responseText;
+            }
+        };
+        xhttp.open("DELETE", "/lixotodos/"+lixotodo_id.value, true);
+        xhttp.send();
     }
+
 </script>
-<%= form_for(lixotodo, :html=>{:name=>"f",:onsubmit=>"return checkform();"}) do |f| %>
+<%= form_for(lixotodo, :html => {:name => "f", :onsubmit => "return checkform();"}) do |f| %>
     <div class="form-group" style="border-bottom: double 1px #dddddd;">
       <div class="col-sm-10">
         <h5>Adicionar residente manualmente à tabela</h5>
       </div>
     </div>
-  <% if lixotodo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(lixotodo.errors.count, "error") %> prohibited this lixotodo from being saved:</h2>
+    <% if lixotodo.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(lixotodo.errors.count, "error") %> prohibited this lixotodo from being saved:</h2>
 
-      <ul>
-      <% lixotodo.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% lixotodo.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :residente_id %>
+      <div class="col-sm-10">
+        <% if action_name.to_s.casecmp('edit')==0 %>
+            <%= f.text_field :res, :value => @lixotodo.residente.nome, :disabled => true %>
+            <%= f.hidden_field :residente_id %>
+        <% else %>
+            <%= select_tag "residente", options_from_collection_for_select(Residente.order("nome"), "id", "nome"), include_blank: true, id: "residenteid", data: {placeholder: "Escolha um residente"} %>
+            <%= f.hidden_field :residente_id %>
+        <% end %>
+      </div>
+
     </div>
-  <% end %>
 
-  <div class="form-group">
-    <%= f.label :residente_id %>
-    <div class="col-sm-10">
-      <% if action_name.to_s.casecmp('edit')==0 %>
-        <%= f.text_field :res, :value => @lixotodo.residente.nome, :disabled => true %>
-        <%= f.hidden_field :residente_id %>
-      <% else %>
-          <%= select_tag "residente", options_from_collection_for_select(Residente.order("nome"), "id", "nome"), include_blank: true, id: "residenteid", data: { placeholder: "Escolha um residente" } %>
-          <%= f.hidden_field :residente_id %>
-      <% end %>
+    <div class="form-group">
+      <%= f.label :data %>
+      <div class="col-sm-10">
+        <%= f.text_field :data %>
+
+      </div>
     </div>
 
-  </div>
-
-  <div class="form-group">
-    <%= f.label :data %>
-    <div class="col-sm-10">
-      <%= f.date_select :data, :format => :default %>
+    <div class="form-group" id="tupla">
     </div>
-  </div>
 
-  <div class="actions">
-    <div class="col-sm-offset-2 col-sm-10">
-      <%= f.submit %>
+    <div class="actions">
+      <div class="col-sm-offset-2 col-sm-10">
+        <%= f.submit %>
+      </div>
     </div>
-  </div>
+
 <% end %>
-

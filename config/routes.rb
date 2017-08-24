@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   root :to => "residentes#index"
   get 'tabela/lixo', to: 'downloads#show', as: 'tabela/lixo'
+  get 'lixotodos_tupla/:data', to: 'lixotodos#tupla', as: 'lixotodos_tupla'
   get 'populate_lixotodos', to: 'application#populate_lixotodos', as: 'populate_lixotodos'
   get 'refresh_lixodones', to: 'application#refresh_lixodones', as: 'refresh_lixodones'
   get 'populate_residentes', to: 'application#populate_residentes', as: 'populate_residentes'

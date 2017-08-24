@@ -14,7 +14,6 @@ class UserSession
 
   def authenticate
     user = User.authenticate(@email, @password)
-
     if user.present?
       store(user)
     else

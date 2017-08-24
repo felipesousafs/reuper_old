@@ -44,7 +44,8 @@
           <a href="<%= cursos_path %>" id="menu-cursos"><i class="fa fa-fw fa-book"></i> Cursos</a>
         </li>
         <li id="menu-tabelas">
-          <a href="javascript:;" data-toggle="collapse" data-target="#demo" id="menu-tabelas"><i class="fa fa-fw fa-table"></i> Tabelas <i class="fa fa-fw fa-caret-down"></i></a>
+          <a href="javascript:;" data-toggle="collapse" data-target="#demo" id="menu-tabelas"><i class="fa fa-fw fa-table"></i>
+            Tabelas <i class="fa fa-fw fa-caret-down"></i></a>
           <ul id="demo" class="collapse">
             <li>
               <a href="<%= lixotodos_path %>"><i class="fa fa-fw fa-trash"></i> Lixo</a>
@@ -72,12 +73,12 @@
       <div class="row">
         <div class="col-lg-12 page-header">
           <p>
-            <h2>
-              <%= controller.name %>
-              <% if user_signed_in? %>
+          <h2>
+            <%= controller.name %>
+            <% if user_signed_in? %>
                 <a href="<%= populate_residentes_path %>"> <i class="fa fa-refresh"></i></a>
-              <% end %>
-            </h2>
+            <% end %>
+          </h2>
 
           </p>
 
@@ -86,7 +87,7 @@
                 <%= render 'lixotodos/update_lixotodos' %>
             <% end %>
             <% if user_signed_in? %>
-              <%= link_to render(partial: 'layouts/ttip_add'), action: :new %>
+                <%= link_to render(partial: 'layouts/ttip_add'), action: :new %>
             <% end %>
           </div>
         </div>
@@ -96,88 +97,136 @@
         <div class="col-lg-12">
 
 
-                <div id="content">
+          <div id="content">
 
-                  <% if notice.present? %>
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <div class="alert alert-info alert-dismissable"  id="notice">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <i class="fa fa-info-circle"></i> <%= notice %>
-                          </div>
-                        </div>
-                      </div>
-                  <% end %>
-                  <% if alert.present? %>
-                      <div class="row" id="alert">
-                        <div class="col-lg-12">
-                          <div class="alert alert-warning alert-dismissable">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <i class="fa fa-info-circle"></i> <%= alert %>
-                          </div>
-                        </div>
-                      </div>
-                  <% end %>
-                  <%= yield %>
+            <% if notice.present? %>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="alert alert-info alert-dismissable" id="notice">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                      <i class="fa fa-info-circle"></i> <%= notice %>
+                    </div>
+                  </div>
                 </div>
+            <% end %>
+            <% if alert.present? %>
+                <div class="row" id="alert">
+                  <div class="col-lg-12">
+                    <div class="alert alert-warning alert-dismissable">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                      <i class="fa fa-info-circle"></i> <%= alert %>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+            <%= yield %>
+          </div>
 
 
         </div>
       </div>
       <!-- /.row -->
-      </div>
-      <!-- /.row -->
-
     </div>
-    <!-- /.container-fluid -->
+    <!-- /.row -->
 
   </div>
-  <!-- /#page-wrapper -->
+  <!-- /.container-fluid -->
+
+</div>
+<!-- /#page-wrapper -->
 
 </div>
 <!-- /#wrapper -->
 
 <%= javascript_include_tag "application" %>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 
-        prettyPrint();
+    prettyPrint();
 
-        //$('select#residenteid').select2();
+    //$('select#residenteid').select2();
 
-        $('select#residenteid').select2({
-            placeholder: "Selecione um residente",
-            allowClear: false
-        });
+    $('select#residenteid').select2({
+        placeholder: "Selecione um residente",
+        allowClear: false
+    });
+
+    $(function () {
+        $("#lixotodo_data").datepicker();
+    });
 
 
-        function formatExample(residente) {
-            var originalOption = $(residente.element);
-            return "<span style='display: inline; background-color: " + originalOption.data("favoriteColor").toLowerCase() + "'>&nbsp;&nbsp;</span> " + residente.text;
+    function formatExample(residente) {
+        var originalOption = $(residente.element);
+        return "<span style='display: inline; background-color: " + originalOption.data("favoriteColor").toLowerCase() + "'>&nbsp;&nbsp;</span> " + residente.text;
+    }
+    $('select#template-example').select2({
+        formatResult: formatExample,
+        formatSelection: formatExample,
+        escapeMarkup: function (m) {
+            return m;
         }
-        $('select#template-example').select2({
-            formatResult: formatExample,
-            formatSelection: formatExample,
-            escapeMarkup: function(m) { return m; }
-        });
+    });
 
-        $('#ajax-example').select2({
-            ajax: {
-                url: "<%= residentes_path(format: 'json') %>",
-                dataType: "json",
-                results: function(data, page) {
-                    return { results: $.map( data, function(residente, i) {
-                        return { id: residente.id, text: residente.name }
-                    } ) }
+    $('#ajax-example').select2({
+        ajax: {
+            url: "<%= residentes_path(format: 'json') %>",
+            dataType: "json",
+            results: function (data, page) {
+                return {
+                    results: $.map(data, function (residente, i) {
+                        return {id: residente.id, text: residente.name}
+                    })
                 }
             }
-        });
+        }
+    });
 
-    </script>
+    $("#lixotodo_data").datepicker({
+        showButtonPanel: true,
+        changeMonth: true,
+        altField: "#lixotodo_data",
+        altFormat: "yy-mm-dd"
+    });
+    document.getElementById("lixotodo_data").onclick = function () {
+        showLixotodoTupla()
+    };
+    function showLixotodoTupla() {
+        var x = document.getElementById("lixotodo_data");
+//            document.getElementById("tupla").addClass("visible");
+//            document.getElementById("tupla").removeClass("invisible");
+    }
+    $("#lixotodo_data").change(function () {
+        $("#tupla").addClass("visible").removeClass("invisible");
+        var data = document.getElementById("lixotodo_data");
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("tupla").innerHTML =
+                    this.responseText;
+            }
+        };
+        xhttp.open("GET", "/lixotodos_tupla/" + data.value, true);
+        xhttp.send();
+    });
+    //Lixotodo element
+    function getRadioItem() {
+        var radio1 = document.getElementById("radio1");
+        if (radio1.checked) {
+            //alert("Checked! " + radio1.value);
+        } else {
+            var radio2 = document.getElementById("radio2");
+            //alert("Not Checked! " + radio2.value);
+        }
+
+    }
+
+
+</script>
 </body>
 
 </html>

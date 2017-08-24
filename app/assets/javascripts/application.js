@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery-ui
+//= require zebra_datepicker.min
 //= require jquery-ui/widgets/autocomplete
 //= require turbolinks
 //= require select2.js

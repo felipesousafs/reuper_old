@@ -111,5 +111,11 @@ class ApplicationController < ActionController::Base
       true
     end
   end
+  
+  def refresh_lixotodo_after_edit(lixotodo)
+    @lixotodo = lixotodo
+    proximo = Lixotodo.where("data >= ?", @lixotodo.data).first
+    Lixotodo.where("data > ? and id != ?", @lixotodo.data, proximo.id).destroy_all
+  end
 
 end
