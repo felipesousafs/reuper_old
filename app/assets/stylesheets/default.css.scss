@@ -8,28 +8,27 @@ $sans-serif-families: "Helvetica", sans-serif;
 $error-text-color: #B94A48;
 $success-text-color: #468847;
 
-
 * {
   font-family: $sans-serif-families;
   font-size: 14px;
 }
 
-.btn-reuper{
+.btn-reuper {
   width: 50px;
 }
-.btn-text{
+
+.btn-text {
   display: none;
 }
 
-
-@media (min-width: 801px){
-  .btn-reuper{
+@media (min-width: 801px) {
+  .btn-reuper {
     width: auto;
   }
-  .btn-text{
+  .btn-text {
     display: inline;
   }
-  .btn{
+  .btn {
     color: #fff;
   }
   .btn-default {
@@ -39,13 +38,11 @@ $success-text-color: #468847;
   }
 }
 
-
 @mixin shadow($color, $x, $y, $radius) {
   -moz-box-shadow: $color $x $y $radius;
   -webkit-box-shadow: $color $x $y $radius;
   box-shadow: $color $x $y $radius;
 }
-
 
 .field_with_errors {
 
@@ -55,24 +52,29 @@ $success-text-color: #468847;
   }
 
   input[type=text], input[type=password], textarea {
-    border: 1px solid rgba(189,74,72, 0.5);
-    @include shadow(rgba(189,74,72, 0.2), 0px, 0px, 8px);
-    &:focus { border: 1px solid rgba(189,74,72, 0.6); }
+    border: 1px solid rgba(189, 74, 72, 0.5);
+    @include shadow(rgba(189, 74, 72, 0.2), 0px, 0px, 8px);
+    &:focus {
+      border: 1px solid rgba(189, 74, 72, 0.6);
+    }
 
   }
 }
-#error_explanation{
+
+#error_explanation {
   @extend .alert-danger;
   @extend .alert;
-  h2{
+  h2 {
     display: none;
   }
 }
+
 .error_message {
   margin-left: 5px;
   display: inline;
   color: $error-text-color;
 }
+
 .padded_flash {
   padding: 10px;
   margin: 10px 0;
@@ -80,26 +82,24 @@ $success-text-color: #468847;
   width: 500px;
 }
 
-
-
-.actions{
+.actions {
   @extend .form-group;
 }
-form{
-  input[type=text]{
+
+form {
+  input[type=text] {
     @extend .form-control;
   }
-  input[type=submit]{
+  input[type=submit] {
     @extend .btn;
     @extend .btn-success;
   }
   @extend .form-horizontal;
-  label{
+  label {
     @extend .col-sm-2;
     @extend .control-label;
   }
 }
-
 
 .books-search input {
   font-size: 1em;
@@ -112,6 +112,7 @@ form{
 .books-search input:focus {
   border-color: #A5CEF5;
 }
+
 .books-search .results .ui-widget-content {
   background: #fff;
   font-size: .9em;
@@ -132,6 +133,7 @@ form{
   border-left: 5px solid transparent;
   height: 6.5em;
 }
+
 .books-search .results .ui-state-focus {
   background: #fff;
   border-left-color: #08c;
@@ -156,7 +158,8 @@ form{
 .books-search .results .ui-state-focus .nome {
   color: #08c;
 }
-.panel-lixotodo{
+
+.panel-lixotodo {
   @include shadow(#ccc, 0, 3px, 6px);
 }
 
@@ -220,7 +223,7 @@ form{
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -231,7 +234,9 @@ form{
   display: block;
 }
 
-.dropdn-content a:hover {background-color: #f1f1f1}
+.dropdn-content a:hover {
+  background-color: #f1f1f1
+}
 
 .dropdn:hover .dropdn-content {
   display: block;
@@ -240,9 +245,41 @@ form{
 .dropdn:hover .dropbtn {
   background-color: rgba(0, 84, 100, 0.46);
 }
-.visible{
+
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 0.9;}
+}
+@keyframes fadeout {
+  from {opacity: 0.9;}
+  to {opacity: 0;}
+}
+
+.visible {
   display: block;
 }
-.invisible{
+
+.invisible {
+  animation-name: fadeout;
+  animation-duration: 2s;
   display: none;
+}
+#opener{
+  color: #ffae28;
+}
+.helpActive {
+  color: #3f2300;
+  text-shadow: 0px 0px 6px #ff8e00;
+}
+
+.tooltipHelp {
+  position: absolute;
+  width: auto;
+  z-index: 9999;
+  border: 1px solid;
+  border-radius: 5px;
+  color: #000;
+  background-color: #d6d6d6;
+  animation-name: fadein;
+  animation-duration: 1s;
 }

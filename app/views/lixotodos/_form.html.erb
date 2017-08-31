@@ -26,22 +26,22 @@
 
         $.ajax({
             type: "DELETE",
-            url: "/lixotodos/"+lixotodo_id
+            url: "/lixotodos/" + lixotodo_id
         });
 
-        alert("Passou do OPEN. ID: "+lixotodo_id);
+        alert("Passou do OPEN. ID: " + lixotodo_id);
     }
 
 </script>
 <%= form_for(lixotodo, :html => {:name => "f", :onsubmit => "return checkform();"}) do |f| %>
     <div class="form-group" style="border-bottom: double 1px #dddddd;">
       <div class="col-sm-10">
-        <h5>Adicionar residente manualmente à tabela</h5>
+        <h5>Selecione a data para a tarefa.</h5>
       </div>
     </div>
     <% if lixotodo.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(lixotodo.errors.count, "error") %> prohibited this lixotodo from being saved:</h2>
+          <h2><%= pluralize(lixotodo.errors.count, "error") %> impedem de salvar a tarefa:</h2>
 
           <ul>
             <% lixotodo.errors.full_messages.each do |message| %>
@@ -67,7 +67,7 @@
 
     <div class="form-group">
       <%= f.label :data %>
-      <div class="col-sm-10">
+      <div class="col-sm-10" data-toggle="tooltip" title="Clique para selecionar a nova data para realização da tarefa.">
         <%= f.text_field :data %>
 
       </div>

@@ -8,20 +8,20 @@
     <% if flag%2 == 0 %>
       <div class="panel panel-default panel-lixotodo" style="border-top: none;">
         <div class="panel-heading" style="background: #333; color: #eeeeee">
-          <h3 class="panel-title"><i class="fa fa-clock-o fa-tasks"></i> <%= lixotodo.data %></h3>
+          <h3 class="panel-title" data-toggle="tooltip" title="Data da tarefa."><i class="fa fa-clock-o fa-tasks"></i> <%= lixotodo.data %></h3>
         </div>
         <div class="panel-body">
     <% end %>
           <div class="list-group row">
             <div class="col-lg-9">
-              <a href="<%= lixotodo_path(lixotodo.id) %>" class="list-group-item">
+              <a data-toggle="tooltip" title="Clique para visualizar detalhes." href="<%= lixotodo_path(lixotodo.id) %>" class="list-group-item">
                 <i class="fa fa-fw fa-user"></i> <%= lixotodo.residente.nome %> &emsp;  &emsp;
                 <i class="fa fa-fw fa-calendar"></i> <%= lixotodo.data %>
               </a>
             </div>
             <div class="col-md-3 list-group-item" style="border: none;">
               <% if user_signed_in? %>
-                <a class="label label-default" href="<%= edit_lixotodo_path(lixotodo) %>">Editar</a>
+                <a data-toggle="tooltip" title="Clique para alterar a data em que esse residente realizará sua tarefa." class="label label-default" href="<%= edit_lixotodo_path(lixotodo) %>">ALTERAR DATA</a>
                 <%= link_to t('.destroy'), lixotodo, method: :delete, :class => 'label label-danger', data: { confirm: 'Tem certeza?' } %>
               <% else %>
                   <button class="label label-default btn" disabled="disabled">Editar</button>

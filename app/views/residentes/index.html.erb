@@ -4,30 +4,30 @@
 
 <table>
   <tbody>
-    <% @residentes.each do |residente| %>
+  <% @residentes.each do |residente| %>
       <tr>
-          <div class="list-group row">
-            <div class="col-lg-9">
-              <a href="<%= residente_path(residente.id) %>" class="list-group-item">
-                <i class="fa fa-fw fa-user"></i> <%= residente.nome %> &emsp;  &emsp;
-                <i class="fa fa-fw fa-bed"></i> <%= residente.quarto.numero.to_s + " - " + residente.quarto.piso %>
-              </a>
-            </div>
-            <div class="col-md-3 list-group-item" style="border: none;">
-              <% if user_signed_in? %>
-                <a class="label label-default" href="<%= edit_residente_path(residente) %>">Editar</a>
-                <%= link_to t('.destroy'), residente, method: :delete, :class => 'label label-danger', data: { confirm: 'Are you sure?' } %>
-              <% else %>
-                <button class="label label-default btn" disabled="disabled">Editar</button>
-                <button class="label label-danger btn" disabled="disabled">Excluir registro</button>
-              <% end %>
-            </div>
+        <div class="list-group row">
+          <div class="col-lg-9">
+            <a data-toggle="tooltip" title="Clique para ver todas as informações do residente." href="<%= residente_path(residente.id) %>" class="list-group-item">
+              <i class="fa fa-fw fa-user"></i> <%= residente.nome %> &emsp; &emsp;
+              <i class="fa fa-fw fa-bed"></i> <%= residente.quarto.numero.to_s + " - " + residente.quarto.piso %>
+            </a>
           </div>
+          <div class="col-md-3 list-group-item" style="border: none;">
+            <% if user_signed_in? %>
+                <a data-toggle="tooltip" title="Editar dados do residente." class="label label-default" href="<%= edit_residente_path(residente) %>">Editar</a>
+                <%= link_to t('.destroy'), residente, method: :delete, :class => 'label label-danger', data: {confirm: 'Tem certeza?'} %>
+            <% else %>
+                <button data-toggle="tooltip" title="Você precisa estar logado para realizar qualquer ação." class="label label-default btn" disabled="disabled">Editar</button>
+                <button data-toggle="tooltip" title="Você precisa estar logado para realizar qualquer ação." class="label label-danger btn" disabled="disabled">Excluir registro</button>
+            <% end %>
+          </div>
+        </div>
       </tr>
 
-    <% end %>
-    <div class="text-right">
-      <a href="#">Ver todos <i class="fa fa-arrow-circle-right"></i></a>
-    </div>
+  <% end %>
+  <!--<div class="text-right">-->
+    <!--<a href="#">Ver todos <i class="fa fa-arrow-circle-right"></i></a>-->
+  <!--</div>-->
   </tbody>
 </table>

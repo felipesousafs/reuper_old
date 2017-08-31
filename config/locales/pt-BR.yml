@@ -163,7 +163,7 @@ pt-BR:
     submit:
       create: Salvar %{model}
       submit: Salvar %{model}
-      update: Atualizar %{model}
+      update: Salvar
       user_session:
         create: 'Entrar'
   number:
@@ -242,7 +242,7 @@ pt-BR:
       destroy: Excluir residente
   lixotodos:
     index:
-      destroy: Excluir registro
+      destroy: X
   lixodones:
     index:
       destroy: Excluir registro

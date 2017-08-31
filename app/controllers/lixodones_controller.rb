@@ -25,7 +25,7 @@ class LixodonesController < ApplicationController
 
   def name
     respond_to do |format|
-      format.html { "Tabela de lixo já cumprida" }
+      format.html { "Residentes que já cumpriram a tabela" }
     end
   end
 

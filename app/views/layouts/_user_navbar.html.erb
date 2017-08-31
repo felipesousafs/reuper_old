@@ -1,8 +1,29 @@
+<script>
+    function toggleHelp() {
+        $("#opener").toggleClass("helpActive");
+        $(".tooltipHelp").toggleClass("invisible");
+
+
+        var el = $("#opener");
+        if (el.text() == el.data("text-swap")) {
+            el.text(el.data("text-original"));
+        } else {
+            el.data("text-original", el.text());
+            el.text(el.data("text-swap"));
+        }
+
+    }
+
+</script>
 <ul class="nav navbar-right top-nav">
-
-
+  <li>
+    <button onclick="toggleHelp()" data-text-swap="Ocultar ajuda" id="opener" type="button" class="dropbtn">
+      Mostrar ajuda
+    </button>
+  </li>
   <li class="dropdn">
-    <button class="dropbtn"><i class="fa fa-user-circle-o"></i> <%= current_user.full_name.split(' ').first %> <b class="caret"></b> </button>
+    <button class="dropbtn"><i class="fa fa-user-circle-o"></i> <%= current_user.full_name.split(' ').first %>
+      <b class="caret"></b></button>
     <ul class="dropdn-content dropdown-menu" style="margin-top: -1px; border-top-right-radius: 0px; border-top-left-radius: 0px; z-index: 0;">
       <li>
         <a href="<%= user_path(current_user) %>"><i class="fa fa-fw fa-user"></i> Meu Perfil</a>

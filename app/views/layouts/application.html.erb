@@ -24,13 +24,13 @@
       </button>
       <a class="navbar-brand" href="<%= root_path %>">Reuper</a>
     </div>
+
     <!-- Top Menu Items -->
     <% if user_signed_in? %>
         <%= render 'layouts/user_navbar' %>
     <% else %>
         <%= render 'layouts/visitor_navbar' %>
     <% end %>
-
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav side-nav">
@@ -67,6 +67,23 @@
   </nav>
 
   <div id="page-wrapper">
+
+    <div class="tooltipHelp invisible" id="dialog-message" title="Download complete">
+      <div class="panel panel-default panel-lixotodo" style="border-top: none;">
+        <div class="panel-heading" style="background: #333; color: #eeeeee">
+          <h3 class="panel-title"><i class="fa fa-warning"></i> AJUDA</h3>
+        </div>
+        <div class="panel-body">
+          <div class="list-group row">
+            <div class="col-lg-12">
+              <p>
+                Para exibir ajuda para cada função do sistema, passe o cursor do mouse por cima do de um elemento (botão, texto, link, etc.)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container-fluid">
       <!-- Page Heading -->

@@ -57,7 +57,7 @@ class LixotodosController < ApplicationController
 
   def name
     respond_to do |format|
-      format.html {"Tabela de lixo a ser cumprida"}
+      format.html {"Tabela de lixo"}
     end
   end
 
@@ -72,13 +72,15 @@ class LixotodosController < ApplicationController
   end
 
   def tupla
-    @lixotodos = Lixotodo.where("data = ?", params[:data])
-    render :partial => "tupla", locals: {lixotodos: @lixotodos}
-
-    # respond_to do |f|
-    #   f.html { @lixotodos }
-    # end
-
+    dia = Time.zone.parse(params[:data])
+    if dia.on_weekend?
+      respond_to do |format|
+        format.html { redirect_to edit_lixotodo_path, notice: 'O dia não pode ser em um fim de semana.'}
+      end
+    else
+      @lixotodos = Lixotodo.where("data = ?", params[:data])
+      render :partial => "tupla", locals: {lixotodos: @lixotodos}
+    end
   end
 
   private
