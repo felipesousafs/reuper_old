@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28e77e81-357f-4c12-8fd5-121d2866c3eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-0af2c9f99e14013ac7f5cafd173f748ce116d634f52a45f9286f98c7c48ec731.css.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-59edea2e8e85cc61b178228cfe80e63948ad3131e46ed87f154ea9d1782a6781.js.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-0af2c9f99e14013ac7f5cafd173f748ce116d634f52a45f9286f98c7c48ec731.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-59edea2e8e85cc61b178228cfe80e63948ad3131e46ed87f154ea9d1782a6781.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-3e9cbf3eb5b99f31cf3e8c2b101753fca622a02667cb594c05463c45ae2dfdde.css.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-3e9cbf3eb5b99f31cf3e8c2b101753fca622a02667cb594c05463c45ae2dfdde.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/default.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/default.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/lixodones_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/lixodones_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/lixotodos_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/lixotodos_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_ttip_lixotodo.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_ttip_lixotodo.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_user_navbar.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_user_navbar.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_visitor_navbar.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_visitor_navbar.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lixotodos/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/lixotodos/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lixotodos/_tupla.html.erb" afterPath="$PROJECT_DIR$/app/views/lixotodos/_tupla.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lixotodos/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/lixotodos/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lixotodos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/lixotodos/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/residentes/index.html.erb" afterPath="$PROJECT_DIR$/app/views/residentes/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/pt-BR.yml" afterPath="$PROJECT_DIR$/config/locales/pt-BR.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-3e59a10c946092b350119d79cc6e4435.json" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-3e59a10c946092b350119d79cc6e4435.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -43,8 +28,8 @@
       <file leaf-file-name="default.css.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/default.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="262" column="26" lean-forward="true" selection-start-line="262" selection-start-column="26" selection-end-line="262" selection-end-column="26" />
+            <state relative-caret-position="307">
+              <caret line="269" column="13" lean-forward="true" selection-start-line="269" selection-start-column="13" selection-end-line="269" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -865,7 +850,7 @@
       <workItem from="1503660341350" duration="3686000" />
       <workItem from="1503920117133" duration="1192000" />
       <workItem from="1504091172094" duration="11786000" />
-      <workItem from="1504177637849" duration="7895000" />
+      <workItem from="1504177637849" duration="8332000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do esqueleto da aplicação + Relacionamentos">
       <created>1499434830976</created>
@@ -1070,11 +1055,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503584971727</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="[ADD] Some tooltips to help users, improving usability.">
+      <created>1504187945483</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1504187945483</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286086000" />
+    <option name="totallyTimeSpent" value="286523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -1086,19 +1078,19 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.49707174" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1108,7 +1100,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[ADD] Começando a adicionar um pouco de front-end com Bootstrap" />
     <MESSAGE value="[ADD] Front-end" />
     <MESSAGE value="[ADD] Autocomplete for input 'Residente' in &quot;Add new lixotodo&quot;" />
     <MESSAGE value="[ADD] Validações e finalização do componente new_lixotodos&#10;[ADD] Front-end: Agrupamento de 2 em 2 na tabela de Lixo" />
@@ -1133,7 +1124,8 @@
     <MESSAGE value="[ADD] Precompiled assets" />
     <MESSAGE value="[UPDATE] &quot;Edit lixotodo&quot;: Adicionado radio para selecionar qual residente será substituido ao alterar a data da tarefa." />
     <MESSAGE value="[UPDATE] Edit lixotodo: alterar data da tarefa de um residente A, seleciona-se o residente B que será substituido pelo residente A, e então a tabela é atualizada de forma semiautomatica" />
-    <option name="LAST_COMMIT_MESSAGE" value="[UPDATE] Edit lixotodo: alterar data da tarefa de um residente A, seleciona-se o residente B que será substituido pelo residente A, e então a tabela é atualizada de forma semiautomatica" />
+    <MESSAGE value="[ADD] Some tooltips to help users, improving usability." />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Some tooltips to help users, improving usability." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1486,8 +1478,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/default.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="262" column="26" lean-forward="true" selection-start-line="262" selection-start-column="26" selection-end-line="262" selection-end-column="26" />
+        <state relative-caret-position="307">
+          <caret line="269" column="13" lean-forward="true" selection-start-line="269" selection-start-column="13" selection-end-line="269" selection-end-column="13" />
           <folding />
         </state>
       </provider>
