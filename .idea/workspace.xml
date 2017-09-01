@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="28e77e81-357f-4c12-8fd5-121d2866c3eb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/default.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/default.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user_session.rb" afterPath="$PROJECT_DIR$/app/models/user_session.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_ttip_update_lixodone.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_ttip_update_lixodone.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_ttip_update_lixotodo.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_ttip_update_lixotodo.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lixotodos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/lixotodos/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-3e59a10c946092b350119d79cc6e4435.json" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-3e59a10c946092b350119d79cc6e4435.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -31,8 +26,8 @@
       <file leaf-file-name="default.css.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/default.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="144" column="14" lean-forward="true" selection-start-line="144" selection-start-column="14" selection-end-line="144" selection-end-column="14" />
+            <state relative-caret-position="153">
+              <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -796,7 +791,7 @@
       <workItem from="1503920117133" duration="1192000" />
       <workItem from="1504091172094" duration="11786000" />
       <workItem from="1504177637849" duration="9008000" />
-      <workItem from="1504266681027" duration="4394000" />
+      <workItem from="1504266681027" duration="4612000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do esqueleto da aplicação + Relacionamentos">
       <created>1499434830976</created>
@@ -1015,11 +1010,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504188349473</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="[UPDATE] Bug fix: email auth now insensitive-case.">
+      <created>1504272808343</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1504272808343</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="291593000" />
+    <option name="totallyTimeSpent" value="291811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -1053,7 +1055,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[ADD] Autocomplete for input 'Residente' in &quot;Add new lixotodo&quot;" />
     <MESSAGE value="[ADD] Validações e finalização do componente new_lixotodos&#10;[ADD] Front-end: Agrupamento de 2 em 2 na tabela de Lixo" />
     <MESSAGE value="[ADD] Front-end: Index e Show para todas as views.&#10;[ADD] Controle para permitir tabela apenas em dias úteis&#10;[ADD] Controlle para evitar cadastrar em Lixotodo um residente já cadastrado em Lixodone" />
     <MESSAGE value="[ADD] Imprimindo pagina em PDF (para testes)." />
@@ -1078,7 +1079,8 @@
     <MESSAGE value="[UPDATE] Edit lixotodo: alterar data da tarefa de um residente A, seleciona-se o residente B que será substituido pelo residente A, e então a tabela é atualizada de forma semiautomatica" />
     <MESSAGE value="[ADD] Some tooltips to help users, improving usability." />
     <MESSAGE value="[ADD] Some tooltips to help users, improving usability. (Assets compiled)" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Some tooltips to help users, improving usability. (Assets compiled)" />
+    <MESSAGE value="[UPDATE] Bug fix: email auth now insensitive-case." />
+    <option name="LAST_COMMIT_MESSAGE" value="[UPDATE] Bug fix: email auth now insensitive-case." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1455,8 +1457,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/default.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="144" column="14" lean-forward="true" selection-start-line="144" selection-start-column="14" selection-end-line="144" selection-end-column="14" />
+        <state relative-caret-position="153">
+          <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
           <folding />
         </state>
       </provider>
