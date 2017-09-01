@@ -3,6 +3,6 @@ class User < ApplicationRecord
   validates_presence_of :email, :password, :full_name
 
   def self.authenticate(email, password)
-    where("email = ? AND password = ?", email, password).first
+    where("lower(email) = ? AND password = ?", email.downcase, password).first
     end
 end

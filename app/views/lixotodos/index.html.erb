@@ -21,7 +21,7 @@
             </div>
             <div class="col-md-3 list-group-item" style="border: none;">
               <% if user_signed_in? %>
-                <a data-toggle="tooltip" title="Clique para alterar a data em que esse residente realizará sua tarefa." class="label label-default" href="<%= edit_lixotodo_path(lixotodo) %>">ALTERAR DATA</a>
+                <a data-toggle="tooltip" title="Clique para alterar a data em que esse residente realizará sua tarefa." class="label label-default" href="<%= edit_lixotodo_path(lixotodo) %>">ANTECIPAR TAREFA</a>
                 <%= link_to t('.destroy'), lixotodo, method: :delete, :class => 'label label-danger', data: { confirm: 'Tem certeza?' } %>
               <% else %>
                   <button class="label label-default btn" disabled="disabled">Editar</button>

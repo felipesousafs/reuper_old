@@ -13,7 +13,7 @@ class UserSession
   end
 
   def authenticate
-    user = User.authenticate(@email, @password)
+    user = User.authenticate(@email.downcase, @password)
     if user.present?
       store(user)
     else
