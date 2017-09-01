@@ -247,12 +247,21 @@ form {
 }
 
 @keyframes fadein {
-  from {opacity: 0;}
-  to {opacity: 0.7;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
 }
+
 @keyframes fadeout {
-  from {opacity: 0.7;}
-  to {opacity: 0;}
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .visible {
@@ -265,9 +274,11 @@ form {
   animation-duration: 2s;
   display: none;
 }
-#opener{
+
+#opener {
   color: #ffae28;
 }
+
 .helpActive {
   color: #3f2300;
   text-shadow: 0px 0px 6px #ff8e00;
@@ -286,4 +297,18 @@ form {
   animation-name: fadein;
   animation-duration: 1s;
   box-shadow: 0 3px 6px 0 rgb(41, 41, 41), 0 4px 15px 0 rgb(28, 28, 28);
+}
+
+
+
+#reuper{
+  font-family: 'Bungee Outline', cursive;
+  font-size: 40px;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 0px #fff;
+
+}
+
+#reuper:hover{
+  text-shadow: 0px 0px 0px #ff8c0e;
 }
