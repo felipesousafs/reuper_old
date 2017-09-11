@@ -6,33 +6,25 @@
         document.getElementById("lixotodo_residente_id").setAttribute("value", valor);
 
     }
+
     function change_lixotodo_item() {
         var lixotodo_id;
         var radio1 = document.getElementById("radio1");
         if (radio1.checked) {
-            alert("Checked! " + radio1.value);
+            //alert("Checked! " + radio1.value);
             lixotodo_id = radio1.value;
         } else {
             var radio2 = document.getElementById("radio2");
-            alert("Not Checked! " + radio2.value);
+            //alert("Not Checked! " + radio2.value);
             lixotodo_id = radio2.value;
         }
+        document.getElementById("lixotodo_sub_id").setAttribute("value", lixotodo_id);
 
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-
-        $.ajax({
-            type: "DELETE",
-            url: "/lixotodos/" + lixotodo_id
-        });
-
-        alert("Passou do OPEN. ID: " + lixotodo_id);
     }
 
+
 </script>
+
 <%= form_for(lixotodo, :html => {:name => "f", :onsubmit => "return checkform();"}) do |f| %>
     <div class="form-group" style="border-bottom: double 1px #dddddd;">
       <div class="col-sm-10">
@@ -75,6 +67,7 @@
 
     <div class="form-group" id="tupla">
     </div>
+    <input id="lixotodo_sub_id" name="lixotodo_sub_id" value="" hidden>
 
     <div class="actions">
       <div class="col-sm-offset-2 col-sm-10">

@@ -251,7 +251,7 @@ form {
     opacity: 0;
   }
   to {
-    opacity: 0.7;
+    opacity: 1;
   }
 }
 
@@ -285,7 +285,7 @@ form {
 }
 
 .tooltipHelp {
-  position: absolute;
+  position: fixed;
   max-width: 40%;
   left: 30%;
   top: 35%;

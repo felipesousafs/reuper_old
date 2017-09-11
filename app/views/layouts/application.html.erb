@@ -11,7 +11,9 @@
 </head>
 <body>
 
+
 <div id="wrapper">
+
   <!-- Navigation -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -77,7 +79,7 @@
           <div class="list-group row">
             <div class="col-lg-12">
               <p>
-                Para exibir ajuda para cada função do sistema, passe o cursor do mouse por cima do de um elemento (botão, texto, link, etc.)
+                Para exibir ajuda para cada função do sistema, passe o cursor do mouse por cima de um elemento (botão, texto, link, etc.)
               </p>
             </div>
           </div>
@@ -93,7 +95,7 @@
           <h2>
             <%= controller.name %>
             <% if user_signed_in? %>
-                <a href="<%= populate_residentes_path %>"> <i class="fa fa-refresh"></i></a>
+                <a class="invisible" href="<%= populate_residentes_path %>"> <i class="fa fa-refresh"></i></a>
             <% end %>
           </h2>
 
@@ -106,6 +108,7 @@
             <% if user_signed_in? %>
                 <%= link_to render(partial: 'layouts/ttip_add'), action: :new %>
             <% end %>
+
           </div>
         </div>
       </div>

@@ -44,6 +44,8 @@ class LixotodosController < ApplicationController
   # PATCH/PUT /lixotodos/1.json
   def update
     respond_to do |format|
+      lixotodo_sub = Lixotodo.find(params[:lixotodo_sub_id])
+      lixotodo_sub.destroy
       if @lixotodo.update(lixotodo_params)
         refresh_lixotodo_after_edit(@lixotodo)
         format.html {redirect_to populate_lixotodos_path, notice: 'Tabela de lixo atualizada com sucesso.'}
@@ -91,6 +93,6 @@ class LixotodosController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def lixotodo_params
-    params.require(:lixotodo).permit(:residente_id, :data)
+    params.require(:lixotodo).permit(:residente_id, :data, :lixotodo_sub_id)
   end
 end
